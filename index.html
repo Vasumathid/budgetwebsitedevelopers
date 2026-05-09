@@ -110,7 +110,8 @@
       .hero {
         min-height: 100vh;
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        justify-content: center;
         padding: 8rem 2.5rem 4rem;
         position: relative;
         overflow: hidden;
@@ -226,15 +227,9 @@
         width: 50%;
         height: 100%;
         z-index: 1;
+        background: url("workspace.jpeg") center center / cover no-repeat;
       }
-      .hero-image-wrap img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        display: block;
-      }
-      .hero-image-wrap::after {
+      .hero-image-wrap::before {
         content: "";
         position: absolute;
         top: 0;
@@ -243,9 +238,21 @@
         height: 100%;
         background: linear-gradient(
           to right,
-          rgba(0, 0, 0, 0.5) 0%,
-          transparent 40%
+          var(--cream) 0%,
+          rgba(245, 240, 232, 0.3) 30%,
+          transparent 60%
         );
+        z-index: 1;
+      }
+      .hero-image-wrap::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(13, 13, 13, 0.15);
+        z-index: 0;
       }
       .hero-image-badge {
         position: absolute;
@@ -253,18 +260,19 @@
         right: 2rem;
         background: var(--gold);
         color: white;
-        padding: 0.8rem 1.2rem;
+        padding: 0.9rem 1.3rem;
         border-radius: 4px;
-        font-size: 0.78rem;
+        font-size: 0.82rem;
         font-weight: 700;
         letter-spacing: 0.5px;
-        line-height: 1.6;
-        box-shadow: 0 8px 24px rgba(200, 151, 58, 0.4);
+        line-height: 1.7;
+        box-shadow: 0 8px 24px rgba(200, 151, 58, 0.5);
         z-index: 2;
       }
       .hero-image-badge span {
         display: block;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+        margin-bottom: 0.2rem;
       }
 
       /* SECTION COMMON */
@@ -597,9 +605,15 @@
         }
         .hero {
           padding: 6rem 1.5rem 3rem;
+          min-height: auto;
         }
         .hero-image-wrap {
-          display: none;
+          position: relative;
+          width: 100%;
+          height: 220px;
+          margin-top: 2rem;
+          border-radius: 8px;
+          overflow: hidden;
         }
         .hero-content {
           max-width: 100%;
@@ -662,10 +676,6 @@
         </div>
       </div>
       <div class="hero-image-wrap">
-        <img
-          src="workspace.jpeg"
-          alt="Budget Website Developers – Workspace in Vellore"
-        />
         <div class="hero-image-badge">
           <span>💻</span>
           Currently building websites<br />from Vellore, Tamil Nadu
