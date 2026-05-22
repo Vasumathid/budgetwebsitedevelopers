@@ -13,7 +13,7 @@
     />
     <meta
       name="keywords"
-      content="website developer Vellore, affordable website design Tamil Nadu, website developer Arcot, school website Tamil Nadu, clinic website Vellore, budget website developer"
+      content="website developer Vellore, affordable website design Tamil Nadu, website developer Arcot, school website Tamil Nadu, clinic website Vellore, budget website developer, website developer Katpadi, website developer Ranipet, website developer Ambur, website developer Thiruvannamalai"
     />
     <meta
       name="google-site-verification"
@@ -23,9 +23,7 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-
     <style>
-      /* ===== RESET & VARIABLES ===== */
       *,
       *::before,
       *::after {
@@ -40,7 +38,7 @@
         --gold-light: #e8b84b;
         --white: #ffffff;
         --muted: #6b6560;
-        --px: clamp(16px, 4vw, 40px); /* responsive horizontal padding */
+        --px: clamp(16px, 4vw, 40px);
       }
       html {
         scroll-behavior: smooth;
@@ -56,7 +54,7 @@
         display: block;
       }
 
-      /* ===== NAV ===== */
+      /* NAV */
       nav {
         position: fixed;
         top: 0;
@@ -116,8 +114,6 @@
       .nav-cta:hover {
         background: var(--gold);
       }
-
-      /* Hamburger */
       .hamburger {
         display: none;
         flex-direction: column;
@@ -135,8 +131,6 @@
         border-radius: 2px;
         transition: all 0.3s;
       }
-
-      /* Mobile nav drawer */
       .mobile-nav {
         display: none;
         position: fixed;
@@ -178,13 +172,30 @@
         padding: 12px;
       }
 
-      /* ===== HERO ===== */
+      /* DEMO STRIP */
+      .demo-strip {
+        background: var(--gold);
+        color: var(--white);
+        text-align: center;
+        padding: 0.6rem var(--px);
+        font-size: 0.82rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        margin-top: 60px;
+      }
+      .demo-strip a {
+        color: var(--white);
+        text-decoration: underline;
+        font-weight: 700;
+      }
+
+      /* HERO */
       .hero {
-        min-height: 100vh;
+        min-height: 90vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 80px var(--px) 48px;
+        padding: 48px var(--px);
         position: relative;
         overflow: hidden;
         background: var(--cream);
@@ -231,7 +242,6 @@
         flex-wrap: wrap;
         margin-bottom: 2rem;
       }
-
       .btn-primary {
         background: var(--gold);
         color: var(--white);
@@ -267,7 +277,6 @@
         background: var(--ink);
         color: var(--white);
       }
-
       .hero-stats {
         display: flex;
         gap: 2rem;
@@ -290,8 +299,6 @@
         text-transform: uppercase;
         color: var(--muted);
       }
-
-      /* Hero image */
       .hero-image-wrap {
         position: absolute;
         top: 0;
@@ -341,7 +348,25 @@
         margin-bottom: 0.1rem;
       }
 
-      /* ===== SECTION COMMON ===== */
+      /* DEMO OFFER BADGE IN HERO */
+      .demo-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(200, 151, 58, 0.12);
+        border: 1.5px solid var(--gold);
+        border-radius: 4px;
+        padding: 0.55rem 1rem;
+        font-size: 0.82rem;
+        font-weight: 500;
+        color: var(--ink);
+        margin-bottom: 1.3rem;
+      }
+      .demo-badge strong {
+        color: var(--gold);
+      }
+
+      /* SECTION COMMON */
       section {
         padding: 5rem var(--px);
       }
@@ -368,7 +393,7 @@
         margin-bottom: 2.5rem;
       }
 
-      /* ===== PORTFOLIO ===== */
+      /* PORTFOLIO */
       .portfolio {
         background: var(--white);
       }
@@ -405,8 +430,8 @@
       .card-thumb.clinic {
         background: linear-gradient(135deg, #1a4d3a, #2d9e6b);
       }
-      .card-thumb.salon {
-        background: linear-gradient(135deg, #5c1a3a, #9e2d6b);
+      .card-thumb.security {
+        background: linear-gradient(135deg, #1a1a2e, #c8973a);
       }
       .card-label {
         position: absolute;
@@ -450,7 +475,82 @@
         color: var(--ink);
       }
 
-      /* ===== SERVICES ===== */
+      /* TESTIMONIALS */
+      .testimonials {
+        background: var(--cream);
+      }
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.8rem;
+      }
+      .testi-card {
+        background: var(--white);
+        border: 1px solid rgba(0, 0, 0, 0.07);
+        border-radius: 4px;
+        padding: 1.8rem;
+        position: relative;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .testi-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+      }
+      .testi-stars {
+        color: var(--gold);
+        font-size: 1rem;
+        margin-bottom: 0.9rem;
+        letter-spacing: 2px;
+      }
+      .testi-text {
+        color: var(--ink);
+        font-size: 0.92rem;
+        line-height: 1.75;
+        margin-bottom: 1.2rem;
+        font-style: italic;
+      }
+      .testi-author {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+      .testi-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--gold);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        color: white;
+        font-size: 1rem;
+        flex-shrink: 0;
+      }
+      .testi-name {
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: var(--ink);
+      }
+      .testi-biz {
+        font-size: 0.78rem;
+        color: var(--muted);
+        letter-spacing: 0.5px;
+      }
+      .testi-quote {
+        position: absolute;
+        top: 1.2rem;
+        right: 1.4rem;
+        font-size: 3rem;
+        color: rgba(200, 151, 58, 0.15);
+        font-family: "Playfair Display", serif;
+        line-height: 1;
+      }
+
+      /* SERVICES */
       .services-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -492,7 +592,46 @@
         font-size: 0.95rem;
       }
 
-      /* ===== ABOUT ===== */
+      /* HOSTING STRIP */
+      .hosting-strip {
+        background: var(--ink);
+        color: var(--white);
+        padding: 2.5rem var(--px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+      .hosting-strip h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--white);
+        margin-bottom: 0.4rem;
+      }
+      .hosting-strip p {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.88rem;
+        line-height: 1.6;
+        max-width: 500px;
+      }
+      .hosting-strip .btn-gold {
+        background: var(--gold);
+        color: white;
+        padding: 0.8rem 1.6rem;
+        border-radius: 2px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.88rem;
+        white-space: nowrap;
+        transition: background 0.2s;
+      }
+      .hosting-strip .btn-gold:hover {
+        background: var(--gold-light);
+      }
+
+      /* ABOUT */
       .about {
         background: var(--ink);
         color: var(--white);
@@ -534,12 +673,41 @@
         border-radius: 4px;
         padding: 1.8rem;
       }
+      .about-photo {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid var(--gold);
+        margin-bottom: 1rem;
+      }
+      .about-photo-placeholder {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: var(--gold);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Playfair Display", serif;
+        font-weight: 900;
+        color: white;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+      }
       .about-card-title {
         font-family: "Playfair Display", serif;
         font-size: 1.3rem;
         font-weight: 700;
         color: var(--gold);
-        margin-bottom: 0.45rem;
+        margin-bottom: 0.2rem;
+      }
+      .about-card-name {
+        font-size: 0.82rem;
+        color: rgba(255, 255, 255, 0.5);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 0.8rem;
       }
       .about-card p {
         color: rgba(255, 255, 255, 0.6);
@@ -574,9 +742,67 @@
         letter-spacing: 1px;
       }
 
-      /* ===== CONTACT ===== */
-      .contact {
+      /* FAQ */
+      .faq {
         background: var(--white);
+      }
+      .faq-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        max-width: 720px;
+      }
+      .faq-item {
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      .faq-question {
+        width: 100%;
+        background: none;
+        border: none;
+        padding: 1.2rem 1.4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-family: "DM Sans", sans-serif;
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: var(--ink);
+        text-align: left;
+        gap: 1rem;
+        transition: background 0.15s;
+      }
+      .faq-question:hover {
+        background: rgba(200, 151, 58, 0.05);
+      }
+      .faq-question.open {
+        background: rgba(200, 151, 58, 0.08);
+      }
+      .faq-icon {
+        font-size: 1.2rem;
+        color: var(--gold);
+        flex-shrink: 0;
+        transition: transform 0.3s;
+      }
+      .faq-question.open .faq-icon {
+        transform: rotate(45deg);
+      }
+      .faq-answer {
+        display: none;
+        padding: 0 1.4rem 1.2rem;
+        font-size: 0.9rem;
+        color: var(--muted);
+        line-height: 1.75;
+      }
+      .faq-answer.open {
+        display: block;
+      }
+
+      /* CONTACT */
+      .contact {
+        background: var(--cream);
       }
       .contact-inner {
         display: grid;
@@ -597,7 +823,7 @@
       .contact-icon {
         width: 44px;
         height: 44px;
-        background: var(--cream);
+        background: var(--white);
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -642,9 +868,8 @@
         opacity: 0.9;
         transform: translateY(-2px);
       }
-
       .consult-box {
-        background: var(--cream);
+        background: var(--white);
         border-radius: 4px;
         padding: 1.8rem;
       }
@@ -669,7 +894,7 @@
         color: var(--gold);
       }
 
-      /* ===== FOOTER ===== */
+      /* FOOTER */
       footer {
         background: var(--ink);
         color: rgba(255, 255, 255, 0.5);
@@ -681,7 +906,7 @@
         color: var(--gold);
       }
 
-      /* ===== ANIMATIONS ===== */
+      /* ANIMATIONS */
       @keyframes fadeUp {
         from {
           opacity: 0;
@@ -693,7 +918,7 @@
         }
       }
 
-      /* ===== RESPONSIVE: TABLET ≤900px ===== */
+      /* RESPONSIVE */
       @media (max-width: 900px) {
         .hero-image-wrap {
           width: 42%;
@@ -707,10 +932,7 @@
           gap: 2.5rem;
         }
       }
-
-      /* ===== RESPONSIVE: MOBILE ≤768px ===== */
       @media (max-width: 768px) {
-        /* Nav */
         .nav-links,
         .nav-cta {
           display: none;
@@ -718,13 +940,9 @@
         .hamburger {
           display: flex;
         }
-
-        /* Hero — stack vertically */
         .hero {
-          padding: 72px var(--px) 40px;
+          padding: 48px var(--px) 40px;
           min-height: auto;
-          flex-direction: column;
-          gap: 0;
         }
         .hero-content {
           max-width: 100%;
@@ -732,18 +950,12 @@
         .hero h1 {
           font-size: clamp(1.9rem, 7vw, 2.6rem);
         }
-        .hero p {
-          font-size: 0.95rem;
-        }
-
-        /* Hero image goes below on mobile */
         .hero-image-wrap {
           position: relative;
           width: 100%;
           height: 220px;
           margin-top: 2rem;
           border-radius: 8px;
-          overflow: hidden;
         }
         .hero-image-wrap::before {
           background: linear-gradient(
@@ -758,30 +970,17 @@
           font-size: 0.74rem;
           padding: 0.7rem 1rem;
         }
-
-        /* Sections */
         section {
           padding: 3.5rem var(--px);
         }
         .about {
           padding: 3.5rem var(--px);
         }
-
-        /* About stats wrap on mobile */
-        .about-stats {
+        .hosting-strip {
+          flex-direction: column;
           gap: 1.2rem;
         }
-
-        /* Hero stats */
-        .hero-stats {
-          gap: 1.4rem;
-        }
-        .stat-num {
-          font-size: 1.7rem;
-        }
       }
-
-      /* ===== RESPONSIVE: SMALL MOBILE ≤480px ===== */
       @media (max-width: 480px) {
         nav {
           height: 56px;
@@ -789,12 +988,8 @@
         .mobile-nav {
           top: 56px;
         }
-        .nav-logo {
-          font-size: 0.9rem;
-        }
-
         .hero {
-          padding: 68px var(--px) 36px;
+          padding: 48px var(--px) 36px;
         }
         .hero h1 {
           font-size: clamp(1.7rem, 8vw, 2.2rem);
@@ -807,24 +1002,6 @@
           width: 100%;
           text-align: center;
         }
-        .hero-stats {
-          gap: 1.2rem;
-        }
-        .stat-num {
-          font-size: 1.5rem;
-        }
-        .stat-label {
-          font-size: 0.66rem;
-        }
-
-        .section-title {
-          font-size: clamp(1.6rem, 6vw, 2rem);
-        }
-        .section-sub {
-          font-size: 0.88rem;
-          margin-bottom: 1.8rem;
-        }
-
         .portfolio-grid {
           grid-template-columns: 1fr;
         }
@@ -835,40 +1012,13 @@
         .service-card {
           padding: 1.3rem 1rem;
         }
-        .service-card h3 {
-          font-size: 0.92rem;
-        }
-        .service-card p {
-          font-size: 0.8rem;
-        }
-        .service-price {
-          font-size: 0.85rem;
-        }
-
-        .about {
+        .testimonials-grid {
           grid-template-columns: 1fr;
-          gap: 2rem;
-        }
-        .about-features li {
-          font-size: 0.85rem;
-        }
-        .about-stats {
-          gap: 1rem;
-        }
-        .about-stat-num {
-          font-size: 1.5rem;
-        }
-
-        .contact-inner {
-          grid-template-columns: 1fr;
-          gap: 2rem;
         }
         .whatsapp-btn {
           width: 100%;
           justify-content: center;
-          font-size: 0.9rem;
         }
-
         section {
           padding: 3rem var(--px);
         }
@@ -876,20 +1026,9 @@
           padding: 3rem var(--px);
         }
       }
-
-      /* ===== VERY SMALL ≤360px ===== */
       @media (max-width: 360px) {
         .services-grid {
           grid-template-columns: 1fr;
-        }
-        .hero-stats {
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: flex-start;
-        }
-        .about-stats {
-          flex-direction: row;
-          flex-wrap: wrap;
         }
       }
     </style>
@@ -907,9 +1046,18 @@
           "addressRegion": "Tamil Nadu",
           "addressCountry": "IN"
         },
-        "areaServed": ["Vellore", "Arcot", "Tamil Nadu"],
+        "areaServed": [
+          "Vellore",
+          "Arcot",
+          "Katpadi",
+          "Ranipet",
+          "Ambur",
+          "Thiruvannamalai",
+          "Tamil Nadu"
+        ],
         "priceRange": "₹5000 - ₹50000",
         "foundingDate": "2025",
+        "founder": { "@type": "Person", "name": "Vasumathi Dulasidaran" },
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+91-9003643649",
@@ -920,12 +1068,14 @@
     </script>
   </head>
   <body>
-    <!-- ===== NAV ===== -->
+    <!-- NAV -->
     <nav>
       <div class="nav-logo">Budget<span>Website</span>Developers</div>
       <ul class="nav-links">
         <li><a href="#portfolio">Work</a></li>
         <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -940,10 +1090,12 @@
       </button>
     </nav>
 
-    <!-- ===== MOBILE NAV ===== -->
+    <!-- MOBILE NAV -->
     <div class="mobile-nav" id="mobileNav">
       <a href="#portfolio" onclick="closeNav()">Work</a>
       <a href="#services" onclick="closeNav()">Services</a>
+      <a href="#testimonials" onclick="closeNav()">Reviews</a>
+      <a href="#faq" onclick="closeNav()">FAQ</a>
       <a href="#about" onclick="closeNav()">About</a>
       <a href="#contact" onclick="closeNav()">Contact</a>
       <a
@@ -954,16 +1106,29 @@
       >
     </div>
 
-    <!-- ===== HERO ===== -->
+    <!-- DEMO STRIP -->
+    <div class="demo-strip">
+      🎯 Free Demo Website in 48 Hours —
+      <a
+        href="https://wa.me/919003643649?text=Hi%2C%20I%20want%20to%20see%20a%20free%20demo%20website%20for%20my%20business"
+        >WhatsApp us to claim yours →</a
+      >
+    </div>
+
+    <!-- HERO -->
     <section class="hero">
       <div class="hero-content">
+        <div class="demo-badge">
+          ⚡ <strong>Free Demo in 48 Hours</strong> — No payment needed
+        </div>
         <span class="hero-tag">Affordable Websites for Local Businesses</span>
         <h1>Your Business Deserves a <em>Great</em> Website</h1>
         <p>
-          I build professional, affordable websites for schools, clinics,
-          salons, and local businesses across Tamil Nadu. With 6 years of IT
-          experience at a leading Bangalore company and 20+ websites built, you
-          get big-agency quality at local prices.
+          Hi, I'm <strong>Vasumathi Dulasidaran</strong> — I build professional,
+          affordable websites for schools, clinics, salons, and local businesses
+          across Tamil Nadu. With 6 years of IT experience at a leading
+          Bangalore company and 20+ websites built, you get big-agency quality
+          at local prices.
         </p>
         <div class="hero-btns">
           <a href="#portfolio" class="btn-primary">See My Work</a>
@@ -979,12 +1144,11 @@
             ><span class="stat-label">Experience</span>
           </div>
           <div class="stat">
-            <span class="stat-num">14 Days</span
-            ><span class="stat-label">Delivery</span>
+            <span class="stat-num">48 Hrs</span
+            ><span class="stat-label">Free Demo</span>
           </div>
         </div>
       </div>
-
       <div class="hero-image-wrap">
         <div class="hero-image-badge">
           <span>💻</span>
@@ -993,13 +1157,13 @@
       </div>
     </section>
 
-    <!-- ===== PORTFOLIO ===== -->
+    <!-- PORTFOLIO -->
     <section class="portfolio" id="portfolio">
       <div class="section-tag">Portfolio</div>
       <h2 class="section-title">Real Websites, Real Businesses</h2>
       <p class="section-sub">
-        Here are some of the websites I have built for local businesses. Each
-        one is custom-made, mobile-friendly, and built to attract customers.
+        Custom-made, mobile-friendly websites built for local businesses across
+        Tamil Nadu — Vellore, Arcot, Arni and beyond.
       </p>
       <div class="portfolio-grid">
         <div class="portfolio-card">
@@ -1009,8 +1173,9 @@
           <div class="card-body">
             <h3>Bharathi Vidyalaya School</h3>
             <p>
-              A complete school website with admissions info, gallery, bilingual
-              support, and WhatsApp contact — built for a school in Arni.
+              A complete school website with admissions info, gallery, Tamil
+              &amp; English bilingual support, and WhatsApp contact — built for
+              a school in Arni.
             </p>
             <a
               href="https://bharathividyalayaschool.com"
@@ -1028,8 +1193,8 @@
             <h3>GD Hospital, Arcot</h3>
             <p>
               Full hospital website for Dr. Vigneshwer Dulasidaran — doctor
-              profile, 9 services, real patient reviews, bilingual English &amp;
-              Tamil, WhatsApp booking.
+              profile, 9 services, real patient reviews, WhatsApp booking, and
+              clean mobile-friendly design.
             </p>
             <a
               href="https://gdhospitalarcot.netlify.app/"
@@ -1040,32 +1205,91 @@
           </div>
         </div>
         <div class="portfolio-card">
-          <div class="card-thumb salon">
-            <span class="card-label">Coming Soon</span>🚀
+          <div class="card-thumb security">
+            <span class="card-label">Security</span>🛡️
           </div>
           <div class="card-body">
-            <h3>More Projects Coming Soon</h3>
+            <h3>Ravana Bouncer Services</h3>
             <p>
-              We are actively building websites for businesses across Vellore.
-              Contact us to be our next success story.
+              Professional website for Tamil Nadu's top bouncer service —
+              service listings, FAQ, coverage map, inquiry form, and WhatsApp
+              booking. Live statewide.
             </p>
-            <a
-              href="https://wa.me/919003643649"
-              class="card-link"
-              target="_blank"
-              >Be Our Next Client →</a
+            <a href="https://ravanaa.org" class="card-link" target="_blank"
+              >Visit Website →</a
             >
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== SERVICES ===== -->
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="testimonials">
+      <div class="section-tag">Client Reviews</div>
+      <h2 class="section-title">What My Clients Say</h2>
+      <p class="section-sub">
+        Real feedback from real business owners across Tamil Nadu.
+      </p>
+      <div class="testimonials-grid">
+        <div class="testi-card">
+          <div class="testi-quote">"</div>
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">
+            "Vasumathi built our bouncer services website from scratch. The
+            design is professional, the WhatsApp booking works perfectly, and
+            our clients find us easily online. Very happy with the work and
+            quick delivery."
+          </p>
+          <div class="testi-author">
+            <div class="testi-avatar">R</div>
+            <div>
+              <div class="testi-name">Ravanaa Bouncer Services</div>
+              <div class="testi-biz">Security Services · Tamil Nadu</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-quote">"</div>
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">
+            "Our school website looks exactly the way we wanted. Parents can now
+            find admission details, see the gallery, and contact us directly
+            from the site. Vasumathi understood what a school website needs."
+          </p>
+          <div class="testi-author">
+            <div class="testi-avatar">B</div>
+            <div>
+              <div class="testi-name">Bharathi Vidyalaya School</div>
+              <div class="testi-biz">School · Arni, Tamil Nadu</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-quote">"</div>
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">
+            "The hospital website is clean, bilingual, and easy for patients to
+            use. Appointment requests come through WhatsApp now. Good quality
+            work at a very reasonable price — would recommend to any clinic."
+          </p>
+          <div class="testi-author">
+            <div class="testi-avatar">G</div>
+            <div>
+              <div class="testi-name">GD Hospital, Arcot</div>
+              <div class="testi-biz">Hospital · Arcot, Tamil Nadu</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
     <section id="services">
       <div class="section-tag">Services &amp; Pricing</div>
       <h2 class="section-title">Simple, Affordable Packages</h2>
       <p class="section-sub">
         No hidden charges. You know exactly what you get and what you pay.
+        Domain, hosting, and UPI payment — all arranged for you.
       </p>
       <div class="services-grid">
         <div class="service-card">
@@ -1091,7 +1315,7 @@
           <h3>Premium Website</h3>
           <p>
             Everything in Business, plus SEO setup, Tamil/English bilingual
-            support, custom features on request.
+            support on request, custom features as needed.
           </p>
           <div class="service-price">₹35,000 – ₹50,000</div>
         </div>
@@ -1107,7 +1331,24 @@
       </div>
     </section>
 
-    <!-- ===== ABOUT ===== -->
+    <!-- HOSTING STRIP -->
+    <div class="hosting-strip">
+      <div>
+        <h3>Domain &amp; Hosting — All Arranged for You</h3>
+        <p>
+          No credit card needed. No technical hassle. I handle your domain
+          registration and hosting setup. You pay yearly via GPay or PhonePe.
+          Includes domain + hosting + renewal management for just ₹3,500/year.
+        </p>
+      </div>
+      <a
+        href="https://wa.me/919003643649?text=Hi%2C%20I%20need%20help%20with%20domain%20and%20hosting%20for%20my%20website"
+        class="btn-gold"
+        >Ask Me About Hosting →</a
+      >
+    </div>
+
+    <!-- ABOUT -->
     <section class="about" id="about">
       <div class="about-left">
         <div class="section-tag">About Me</div>
@@ -1115,30 +1356,32 @@
           6 Years of Professional Experience. Now at Your Budget.
         </h2>
         <p class="section-sub">
-          I am a Senior Software Developer with 6 years of experience at a
-          leading IT company in Bangalore, with 20+ websites built
-          professionally. Now I bring that same enterprise quality to local
-          businesses — at prices that actually make sense.
+          I bring enterprise-level quality to local businesses in Vellore,
+          Arcot, Katpadi, Ranipet, Ambur, and across Tamil Nadu — at prices that
+          actually make sense.
         </p>
         <ul class="about-features">
           <li>6 years of professional website development experience</li>
           <li>Former Senior Software Developer in Bangalore IT industry</li>
           <li>20+ websites built independently and professionally</li>
-          <li>Whatever you need — I can build it, no limitations</li>
           <li>Mobile-friendly websites that work on any phone</li>
           <li>Local SEO so customers find you on Google</li>
-          <li>Tamil &amp; English language support</li>
+          <li>Tamil &amp; English bilingual support available on request</li>
           <li>Fast delivery — most websites in 14 days</li>
+          <li>Free demo website in 48 hours — see before you pay</li>
         </ul>
       </div>
       <div class="about-right">
         <div class="about-card">
-          <div class="about-card-title">Big City Skills. Local Prices.</div>
+          <div class="about-photo-placeholder">V</div>
+          <div class="about-card-title">Hi, I'm Vasumathi</div>
+          <div class="about-card-name">Vasumathi Dulasidaran · Founder</div>
           <p>
             Most agencies charge ₹30,000–₹80,000 for what I deliver. As a Senior
-            Software Developer in a leading Bangalore IT company, I built 20+
+            Software Developer at a leading Bangalore IT company, I built 20+
             websites professionally. Now I bring that same quality directly to
-            you — no middlemen, no agency markup.
+            you — no middlemen, no agency markup. Just honest work at honest
+            prices.
           </p>
           <div class="about-stats">
             <div>
@@ -1150,8 +1393,8 @@
               <div class="about-stat-lbl">Custom Built</div>
             </div>
             <div>
-              <div class="about-stat-num">14 Days</div>
-              <div class="about-stat-lbl">Delivery</div>
+              <div class="about-stat-num">48 Hrs</div>
+              <div class="about-stat-lbl">Free Demo</div>
             </div>
           </div>
           <a
@@ -1172,16 +1415,118 @@
       </div>
     </section>
 
-    <!-- ===== CONTACT ===== -->
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="section-tag">FAQ</div>
+      <h2 class="section-title">Questions? I've Got Answers.</h2>
+      <p class="section-sub">
+        The most common things people ask before hiring me.
+      </p>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Can I see a demo website before paying anything?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes — this is my most popular offer. WhatsApp me your business name
+            and type, and I will build a free demo website for you within 48
+            hours. You can see exactly how your site will look before spending a
+            single rupee. No obligation, no pressure.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How much does a website cost?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Prices start from ₹12,000 for a basic website and go up to ₹50,000
+            for a premium website with SEO and bilingual support. Most small
+            businesses in Vellore go with the Business package at
+            ₹20,000–₹30,000. I give you a fixed price upfront — no hidden
+            charges ever.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How long will it take to build my website?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Most websites are delivered within 14 days of confirming the order.
+            Simple sites can be done in 7 days. I will give you a clear delivery
+            date before we start so you know exactly when to expect your site.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Will my website work on mobile phones?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes, 100%. Every website I build is fully mobile-friendly and tested
+            on Android and iPhone screens. Most of your customers will visit
+            from their phone — so this is a priority, not an afterthought.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do you help with domain and hosting? I don't have a credit card.
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes — and this is something I handle completely for you. No credit
+            card needed. I register your domain and set up hosting on your
+            behalf. You pay me via GPay or PhonePe. Annual renewal is
+            ₹3,500/year and I remind you before it's due. No technical stress
+            for you at all.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do you serve areas outside Vellore?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes. I build websites for businesses across Tamil Nadu — Vellore,
+            Arcot, Katpadi, Ranipet, Ambur, Thiruvannamalai, and beyond.
+            Everything is done remotely so location is no barrier. WhatsApp me
+            wherever you are.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What if I need changes after the website is live?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Minor changes like updating text, phone numbers, or images are
+            included for the first 30 days after delivery. After that, I offer a
+            monthly maintenance plan starting at ₹1,500/month to keep your site
+            updated anytime you need.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
     <section class="contact" id="contact">
       <div class="section-tag">Contact</div>
       <h2 class="section-title">Let's Build Your Website</h2>
       <p class="section-sub">
         Send me a WhatsApp message and I'll get back to you within 24 hours with
-        a free consultation.
+        a free consultation — or claim your free 48-hour demo site right now.
       </p>
       <div class="contact-inner">
         <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">👩‍💻</div>
+            <div>
+              <h4>Your Developer</h4>
+              <p>Vasumathi Dulasidaran</p>
+            </div>
+          </div>
           <div class="contact-item">
             <div class="contact-icon">📍</div>
             <div>
@@ -1218,6 +1563,8 @@
               <li><span>✦</span> Suggested pages and features</li>
               <li><span>✦</span> Transparent pricing upfront</li>
               <li><span>✦</span> Estimated delivery timeline</li>
+              <li><span>✦</span> Free demo site in 48 hours</li>
+              <li><span>✦</span> Domain &amp; hosting arranged via UPI</li>
               <li><span>✦</span> No pressure, no obligation</li>
             </ul>
           </div>
@@ -1225,11 +1572,11 @@
       </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- FOOTER -->
     <footer>
       <p>
-        © 2026 <span>Budget Website Developers</span> · Affordable Website
-        Design · Vellore, Tamil Nadu
+        © 2026 <span>Budget Website Developers</span> · Vasumathi Dulasidaran ·
+        Affordable Website Design · Vellore, Tamil Nadu
       </p>
     </footer>
 
@@ -1258,7 +1605,6 @@
           s.style.opacity = "";
         });
       }
-      // Close mobile nav on outside click
       document.addEventListener("click", function (e) {
         const nav = document.getElementById("mobileNav");
         const btn = document.getElementById("hamburgerBtn");
@@ -1266,10 +1612,21 @@
           nav.classList.contains("open") &&
           !nav.contains(e.target) &&
           !btn.contains(e.target)
-        ) {
+        )
           closeNav();
-        }
       });
+      function toggleFaq(btn) {
+        const answer = btn.nextElementSibling;
+        const isOpen = btn.classList.contains("open");
+        document.querySelectorAll(".faq-question.open").forEach((q) => {
+          q.classList.remove("open");
+          q.nextElementSibling.classList.remove("open");
+        });
+        if (!isOpen) {
+          btn.classList.add("open");
+          answer.classList.add("open");
+        }
+      }
     </script>
   </body>
 </html>
