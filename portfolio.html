@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Websites for Tamil Nadu Schools, Clinics & Businesses</title>
+  <meta
+    name="description"
+    content="Live websites built for SSS College for Women, Bharathi Vidyalaya School, GD Hospital Arcot, Ravanaa Bouncer Services and more across Tamil Nadu."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .case { display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; align-items:center; margin-bottom:4.5rem; }
+    .case:nth-child(even) .case-img { order:2; }
+    .case-img { border-radius:var(--radius); overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow-lg); position:relative; }
+    .case-img img { width:100%; display:block; }
+    .case-img.placeholder { aspect-ratio:16/10; background:linear-gradient(135deg,var(--teal),var(--teal-l)); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.85); font-family:"IBM Plex Mono",monospace; font-size:0.85rem; text-align:center; padding:2rem; }
+    .case-tag { display:inline-block; background:var(--teal-pale); color:var(--teal); font-size:0.72rem; font-weight:700; padding:0.3rem 0.7rem; border-radius:20px; margin-bottom:0.7rem; }
+    .case h3 { font-size:1.5rem; margin-bottom:0.6rem; }
+    .case p { color:var(--ink-soft); margin-bottom:1rem; font-size:0.95rem; }
+    .case-feats { list-style:none; margin-bottom:1.2rem; }
+    .case-feats li { font-size:0.85rem; padding:0.3rem 0; }
+    .case-feats li::before { content:"→ "; color:var(--marigold-d); font-weight:700; }
+    .case-quote { background:var(--white); border-left:3px solid var(--marigold); padding:0.9rem 1.1rem; font-size:0.85rem; font-style:italic; margin-bottom:1.2rem; border-radius:0 8px 8px 0; }
+    @media (max-width:860px){
+      .case { grid-template-columns:1fr; }
+      .case-img { order:0 !important; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><span class="dot"></span>Budget Website Developers</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="services.html">Services &amp; Pricing</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://wa.me/919003643649" target="_blank" class="nav-cta">WhatsApp Me</a></li>
+      </ul>
+      <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-panel" id="mobilePanel">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="services.html">Services &amp; Pricing</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://wa.me/919003643649" target="_blank">WhatsApp Me →</a>
+    </div>
+  </nav>
+
+  <section style="padding-bottom:0.5rem">
+    <div class="wrap">
+      <div class="eyebrow">Portfolio</div>
+      <h1 class="sec-title">Real sites. Real Tamil Nadu businesses.</h1>
+      <p class="sec-sub">A selection of live websites built for schools, clinics and businesses — each one delivered, tracked, and handed over just like the docket on the homepage.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:1rem">
+    <div class="wrap">
+
+      <div class="case reveal">
+        <div class="case-img"><img src="images/school.PNG" alt="Bharathi Vidyalaya School website homepage" /></div>
+        <div>
+          <span class="case-tag">School · Growth Package</span> <span class="verify-chip" style="margin:0 0 0.7rem 0.4rem;display:inline-flex">✓ Live &amp; Verified</span>
+          <h3>Bharathi Vidyalaya School</h3>
+          <p>A full school website with dynamic News &amp; Events, admissions info, and complete local SEO — helping the school get discovered on Google Search.</p>
+          <ul class="case-feats">
+            <li>Dynamic News &amp; Events via Google Sheets integration</li>
+            <li>Google Search Console + Google Business Profile setup</li>
+            <li>Mobile-first, bilingual-ready layout</li>
+          </ul>
+          <div class="case-quote">"Since our website went live, we have been getting calls from people who found us online. Please keep up your good work!"<br /><strong>— Bharathi Vidyalaya School</strong></div>
+          <a href="https://bharathividyalayaschool.com" target="_blank" class="btn btn-dark">Visit Live Site →</a>
+        </div>
+      </div>
+
+      <div class="case reveal">
+        <div class="case-img"><img src="images/hospital.PNG" alt="GD Hospital Arcot website homepage" /></div>
+        <div>
+          <span class="case-tag">Clinic · Growth Package</span> <span class="verify-chip" style="margin:0 0 0.7rem 0.4rem;display:inline-flex">✓ Live &amp; Verified</span>
+          <h3>GD Hospital, Arcot</h3>
+          <p>A clean, trustworthy healthcare website with doctor profiles, services, and a working enquiry form so patients can reach out directly.</p>
+          <ul class="case-feats">
+            <li>Doctor &amp; department profiles</li>
+            <li>Appointment enquiry form</li>
+            <li>Fast-loading, mobile-optimized</li>
+          </ul>
+          <a href="https://gdhospitalarcot.netlify.app" target="_blank" class="btn btn-dark">Visit Live Site →</a>
+        </div>
+      </div>
+
+      <div class="case reveal">
+        <div class="case-img"><img src="images/ravanaa.PNG" alt="Ravanaa Bouncer Services website homepage" /></div>
+        <div>
+          <span class="case-tag">Local Business · Starter Package</span> <span class="verify-chip" style="margin:0 0 0.7rem 0.4rem;display:inline-flex">✓ Live &amp; Verified</span>
+          <h3>Ravanaa Bouncer Services</h3>
+          <p>A conversion-focused business site — from requirements to a live working demo in under 24 hours, complete with a full handover checklist.</p>
+          <ul class="case-feats">
+            <li>Delivered overnight — demo ready by morning</li>
+            <li>SEO audit + 20-step handover checklist</li>
+            <li>WhatsApp-first enquiry flow</li>
+          </ul>
+          <div class="case-quote">"We gave our requirements at night and got the demo site ready by morning. She is sincere and gives great work. Highly recommended!"<br /><strong>— Arun Kumar, Owner</strong></div>
+          <a href="https://ravanaa.org" target="_blank" class="btn btn-dark">Visit Live Site →</a>
+        </div>
+      </div>
+
+      <div class="case reveal">
+        <div class="case-img placeholder">📸 Screenshot coming soon</div>
+        <div>
+          <span class="case-tag">College · Custom Package</span> <span class="verify-chip" style="margin:0 0 0.7rem 0.4rem;display:inline-flex">✓ Live &amp; Verified</span>
+          <h3>SSS College for Women, Arni</h3>
+          <p>A premium 5-page animated college website — scroll-reveal animations, dropdown navigation, a PDF-based media &amp; video gallery, working enquiry form, and a built-in AI chatbot that answers admissions questions instantly, even after hours.</p>
+          <ul class="case-feats">
+            <li>Fully scroll &amp; entrance-animated design</li>
+            <li>AI chatbot for admissions &amp; course queries</li>
+            <li>Media/video gallery with PDF.js viewer</li>
+          </ul>
+          <a href="https://sssforwomensarni.netlify.app" target="_blank" class="btn btn-dark">Visit Live Site →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section style="background:var(--paper-d)">
+    <div class="wrap">
+      <div class="cta-band-wrap reveal" style="background:var(--teal);color:#fff;border-radius:var(--radius);padding:3rem 2rem;text-align:center">
+        <h2 style="color:#fff;margin-bottom:0.7rem">Your business could be next</h2>
+        <p style="color:rgba(255,255,255,0.75);margin-bottom:1.5rem">Send your requirements today and see your own website live in days.</p>
+        <a href="https://wa.me/919003643649?text=Hi%20Vasumathi%2C%20I%20saw%20your%20portfolio%20and%20want%20a%20website%20for%20my%20business." target="_blank" class="btn btn-primary">💬 Start My Website</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        <div class="footer-logo">Budget Website Developers</div>
+        <p style="font-size:0.85rem;max-width:280px">Affordable, professional 5-page websites for schools, clinics &amp; local businesses across Tamil Nadu.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="services.html">Services &amp; Pricing</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://budgetwebsitedevelopers.blogspot.com/" target="_blank">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get In Touch</h4>
+        <ul>
+          <li><a href="tel:+919003643649">📞 90036 43649</a></li>
+          <li><a href="https://wa.me/919003643649" target="_blank">💬 WhatsApp</a></li>
+          <li>📍 Vellore, Tamil Nadu</li>
+          <li><a href="https://www.linkedin.com/in/vasumathi-dulasidaran-817b8784/" target="_blank">🔗 LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Budget Website Developers · Vasumathi Dulasidaran</div>
+  </footer>
+
+  <a href="https://wa.me/919003643649?text=Hi%20Vasumathi%2C%20I%20am%20interested%20in%20a%20website%20for%20my%20business." class="wa-float" target="_blank" aria-label="WhatsApp">💬</a>
+
+  <button class="bot-float" id="botToggle" aria-label="Chat with assistant">🤖</button>
+  <div class="bot-panel" id="botPanel">
+    <div class="bot-head">Ask Vasu's Assistant<span class="sub">Usually replies instantly</span><button class="bot-close" id="botClose" aria-label="Close chat">✕</button></div>
+    <div class="bot-body" id="botBody">
+      <div class="bot-msg bot">Hi! I'm the site assistant for Budget Website Developers 👋 Ask me about pricing, delivery time, or what's included.</div>
+    </div>
+    <div class="bot-quick" id="botQuick">
+      <button class="bot-chip" data-q="pricing">💰 Pricing</button>
+      <button class="bot-chip" data-q="delivery">⏱️ Delivery time</button>
+      <button class="bot-chip" data-q="process">🛠️ How it works</button>
+      <button class="bot-chip" data-q="payment">💳 Payment terms</button>
+      <button class="bot-chip" data-q="talk">📞 Talk to Vasu</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
