@@ -27,6 +27,9 @@
     .case-feats li { font-size:0.85rem; padding:0.3rem 0; }
     .case-feats li::before { content:"→ "; color:var(--marigold-d); font-weight:700; }
     .case-quote { background:var(--white); border-left:3px solid var(--marigold); padding:0.9rem 1.1rem; font-size:0.85rem; font-style:italic; margin-bottom:1.2rem; border-radius:0 8px 8px 0; }
+    .case-num { font-family:"IBM Plex Mono",monospace; font-size:0.7rem; color:var(--ink-soft); letter-spacing:0.06em; margin-bottom:0.6rem; }
+    .case-label { font-family:"IBM Plex Mono",monospace; font-size:0.68rem; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; color:var(--marigold-d); margin:1rem 0 0.35rem; }
+    .pf-intro { max-width:640px; font-size:0.95rem; color:var(--ink-soft); margin-top:0.8rem; }
     @media (max-width:860px){
       .case { grid-template-columns:1fr; }
       .case-img { order:0 !important; }
@@ -62,6 +65,7 @@
       <div class="eyebrow">Portfolio</div>
       <h1 class="sec-title">Real sites. Real Tamil Nadu businesses.</h1>
       <p class="sec-sub">A selection of live websites built for schools, clinics and businesses — each one delivered, tracked, and handed over just like the docket on the homepage.</p>
+      <p class="pf-intro">Every project below follows the same process: understand the real problem the client was facing, build something that actually solves it, then prove it works — not just show it looking nice.</p>
     </div>
   </section>
 
@@ -71,13 +75,18 @@
       <div class="case reveal">
         <div class="case-img placeholder"><img src="images/ssswomens.png" alt="SSS Womens College website homepage" /></div>
         <div>
+          <div class="case-num">CASE FILE Nº01 / 04</div>
           <span class="case-tag" style="background:var(--marigold);color:var(--teal)">⭐ My First Client</span> <span class="verify-chip" style="margin:0 0 0.7rem 0.4rem;display:inline-flex">✓ Live &amp; Verified</span>
           <h3>SSS College for Women, Arni</h3>
-          <p>A premium 5-page animated college website — scroll-reveal animations, dropdown navigation, a PDF-based media &amp; video gallery, working enquiry form, and a built-in AI chatbot that answers admissions questions instantly, even after hours.</p>
+          <div class="case-label">The Challenge</div>
+          <p>The college needed a website that felt as premium as the education it offers — and a way for prospective students to get admissions answers instantly, even outside office hours.</p>
+          <div class="case-label">The Approach</div>
           <ul class="case-feats">
-            <li>Fully scroll &amp; entrance-animated design</li>
+            <li>Fully scroll &amp; entrance-animated 5-page design</li>
             <li>Media/video gallery with PDF.js viewer</li>
+            <li>Built-in AI chatbot answering admissions questions after hours</li>
           </ul>
+          <div class="case-label">The Result</div>
           <div class="result-chips">
             <span class="result-chip">📍 Appears on Google</span>
             <span class="result-chip">🔍 SEO Optimized</span>
@@ -90,14 +99,18 @@
       <div class="case reveal">
         <div class="case-img"><img src="images/school.PNG" alt="Bharathi Vidyalaya School website homepage" /></div>
         <div>
+          <div class="case-num">CASE FILE Nº02 / 04</div>
           <span class="case-tag">School · Growth Package</span> <span class="verify-chip" style="margin:0 0 0.7rem 0.4rem;display:inline-flex">✓ Live &amp; Verified</span>
           <h3>Bharathi Vidyalaya School</h3>
-          <p>A full school website with dynamic News &amp; Events, admissions info, and complete local SEO — helping the school get discovered on Google Search.</p>
+          <div class="case-label">The Challenge</div>
+          <p>Prospective parents had no way to find the school online — admissions relied entirely on word of mouth, referrals, and walk-ins, with no presence on Google Search at all.</p>
+          <div class="case-label">The Approach</div>
           <ul class="case-feats">
             <li>Dynamic News &amp; Events via Google Sheets integration</li>
             <li>Google Search Console + Google Business Profile setup</li>
             <li>Mobile-first, bilingual-ready layout</li>
           </ul>
+          <div class="case-label">The Result</div>
           <div class="result-chips">
             <span class="result-chip">📍 Appears on Google</span>
             <span class="result-chip">📱 Mobile Speed 95+</span>
@@ -113,14 +126,18 @@
       <div class="case reveal">
         <div class="case-img"><img src="images/hospital.PNG" alt="GD Hospital Arcot website homepage" /></div>
         <div>
+          <div class="case-num">CASE FILE Nº03 / 04</div>
           <span class="case-tag">Clinic · Growth Package</span> <span class="verify-chip" style="margin:0 0 0.7rem 0.4rem;display:inline-flex">✓ Live &amp; Verified</span>
           <h3>GD Hospital, Arcot</h3>
-          <p>A clean, trustworthy healthcare website with doctor profiles, services, and a working enquiry form so patients can reach out directly.</p>
+          <div class="case-label">The Challenge</div>
+          <p>Patients searching online often chose whichever clinic looked most trustworthy on Google — with no website, GD Hospital was invisible at exactly the moment patients were deciding where to go.</p>
+          <div class="case-label">The Approach</div>
           <ul class="case-feats">
             <li>Doctor &amp; department profiles</li>
             <li>Appointment enquiry form</li>
             <li>Fast-loading, mobile-optimized</li>
           </ul>
+          <div class="case-label">The Result</div>
           <div class="result-chips">
             <span class="result-chip">📍 Appears on Google</span>
             <span class="result-chip">⚡ Fast Loading</span>
@@ -134,14 +151,18 @@
       <div class="case reveal">
         <div class="case-img"><img src="images/ravanaa.PNG" alt="Ravanaa Bouncer Services website homepage" /></div>
         <div>
+          <div class="case-num">CASE FILE Nº04 / 04</div>
           <span class="case-tag">Local Business · Starter Package</span> <span class="verify-chip" style="margin:0 0 0.7rem 0.4rem;display:inline-flex">✓ Live &amp; Verified</span>
           <h3>Ravanaa Bouncer Services</h3>
-          <p>A conversion-focused business site — from requirements to a live working demo in under 24 hours, complete with a full handover checklist.</p>
+          <div class="case-label">The Challenge</div>
+          <p>Time was the real constraint — Arun needed a professional web presence fast, without the weeks-long back-and-forth larger agencies are known for.</p>
+          <div class="case-label">The Approach</div>
           <ul class="case-feats">
             <li>Delivered overnight — demo ready by morning</li>
             <li>SEO audit + 20-step handover checklist</li>
             <li>WhatsApp-first enquiry flow</li>
           </ul>
+          <div class="case-label">The Result</div>
           <div class="result-chips">
             <span class="result-chip">📍 Appears on Google</span>
             <span class="result-chip">🔍 SEO Optimized</span>
@@ -161,6 +182,7 @@
         <h2 style="color:#fff;margin-bottom:0.7rem">Your business could be next</h2>
         <p style="color:rgba(255,255,255,0.75);margin-bottom:1.5rem">Send your requirements today and see your own website live in days.</p>
         <a href="https://wa.me/919003643649?text=Hi%20Vasumathi%2C%20I%20saw%20your%20portfolio%20and%20want%20a%20website%20for%20my%20business." target="_blank" class="btn btn-primary">💬 Start My Website</a>
+        <p style="color:rgba(255,255,255,0.6);margin-top:1rem;font-size:0.8rem">Pay 50% to start, 50% only after you approve the demo.</p>
       </div>
     </div>
   </section>

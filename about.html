@@ -36,6 +36,18 @@
     .stats-row .n { font-family:"Fraunces",serif; font-size:2.1rem; color:var(--teal); display:block; }
     .stats-row .l { font-size:0.78rem; color:var(--ink-soft); }
     @media (max-width:860px){ .ab-grid{grid-template-columns:1fr;} .ab-photo-wrap{position:static; max-width:260px; margin:0 auto;} .values-grid{grid-template-columns:1fr;} }
+    .mv-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; margin:1.6rem 0; }
+    .mv-card { background:var(--teal-pale); border-radius:var(--radius); padding:1.3rem 1.4rem; }
+    .mv-card h4 { font-family:"Fraunces",serif; font-size:1.05rem; color:var(--teal); margin-bottom:0.4rem; }
+    .mv-card p { font-size:0.87rem; color:var(--ink-soft); }
+    .core-values { display:grid; grid-template-columns:repeat(2,1fr); gap:1rem 1.6rem; margin:1.2rem 0 1.8rem; }
+    .cv-item { border-left:3px solid var(--marigold); padding:0.2rem 0 0.2rem 0.9rem; }
+    .cv-item h4 { font-size:0.9rem; margin-bottom:0.2rem; }
+    .cv-item p { font-size:0.82rem; color:var(--ink-soft); }
+    .personality-box { background:var(--white); border:1px solid var(--line); border-left:3px solid var(--teal-l); border-radius:var(--radius); padding:1.3rem 1.4rem; margin:1.6rem 0; }
+    .personality-box h4 { font-size:0.95rem; margin-bottom:0.5rem; }
+    .personality-box p { font-size:0.88rem; color:var(--ink-soft); }
+    @media (max-width:640px){ .mv-grid, .core-values { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
@@ -65,8 +77,8 @@
   <section class="ab-hero">
     <div class="wrap">
       <div class="eyebrow">About Me</div>
-      <h1 class="sec-title" style="font-size:clamp(2rem,4vw,2.8rem)">Big city skills. Local prices. No middlemen.</h1>
-      <p class="sec-sub" style="max-width:640px">I spent 6 years as a Senior Software Developer at a leading IT company in Bangalore. Now I bring that same professional quality directly to schools, clinics and businesses across Vellore and Tamil Nadu — and you deal with me, personally, every step of the way.</p>
+      <h1 class="sec-title" style="font-size:clamp(2rem,4vw,2.8rem)">I used to build websites for companies you've heard of. Now I build them for the school down your road.</h1>
+      <p class="sec-sub" style="max-width:640px">Six years as a Senior Software Developer in Bangalore taught me what a genuinely well-built website looks like. Coming home to Tamil Nadu showed me how few schools, clinics and local businesses actually had one — and how much that was quietly costing them. This is the page where I tell you why I do this, and why you'd be dealing with me, personally, not a sales team.</p>
     </div>
   </section>
 
@@ -100,10 +112,29 @@
           <p>So I started Budget Website Developers — bringing city-level technical skill directly to local businesses, at prices that make sense for Tamil Nadu, with the speed and personal attention a big agency can't offer. No account managers, no outsourced developers, no delays. You talk to me, and I build your site myself.</p>
         </div>
 
+        <div class="mv-grid reveal">
+          <div class="mv-card">
+            <h4>🎯 Mission</h4>
+            <p>Give every school, clinic and small business in Tamil Nadu a website that actually works — not one that just exists.</p>
+          </div>
+          <div class="mv-card">
+            <h4>🔭 Vision</h4>
+            <p>A Tamil Nadu where no local business loses a customer simply because they couldn't be found on Google.</p>
+          </div>
+        </div>
+
         <div class="stats-row reveal">
           <div><span class="n">6+</span><span class="l">Years Exp.</span></div>
           <div><span class="n">5</span><span class="l">Live Sites</span></div>
           <div><span class="n">7 Days*</span><span class="l">Delivery</span></div>
+        </div>
+
+        <h3 style="font-size:1.15rem;margin-bottom:0.4rem" class="reveal">What I believe</h3>
+        <div class="core-values reveal">
+          <div class="cv-item"><h4>Honesty over hype</h4><p>No inflated numbers, no fake urgency — if I say it, you can check it.</p></div>
+          <div class="cv-item"><h4>Craft over templates</h4><p>Every site is built for that one business, not recycled from a theme store.</p></div>
+          <div class="cv-item"><h4>Access over layers</h4><p>You reach the person building your site — not an account manager relaying messages.</p></div>
+          <div class="cv-item"><h4>Fair pricing, local reality</h4><p>Priced for what a Tamil Nadu business can actually justify spending, not agency rates.</p></div>
         </div>
 
         <h3 style="font-size:1.15rem;margin-bottom:0.8rem" class="reveal">Why local businesses choose me</h3>
@@ -116,8 +147,28 @@
           <div class="value-card"><div class="ic">🛠️</div><h4>Fully managed</h4><p>Domain, hosting and renewals handled end-to-end so you don't have to think about it.</p></div>
         </div>
 
+        <div class="personality-box reveal">
+          <h4>👤 The team? It's just me — on purpose.</h4>
+          <p>No account managers, no outsourced developers, no layers between you and the work. That's not a limitation while I "scale up" — it's the actual point. You get the person who builds it, every time.</p>
+        </div>
+
+        <div class="personality-box reveal">
+          <h4>🪔 Off the clock</h4>
+          <p>Outside client projects, I run a small Instagram jewellery boutique and a language-learning page, and I write about everyday South Indian life on my own blog. So when I say I understand small, local businesses — it's not just professional theory. I run a couple myself.</p>
+        </div>
+
+        <div class="trust-card reveal" style="margin-top:1.6rem">
+          <div class="ic">🙋</div>
+          <div>
+            <h4>Wondering if it's really me, and not an agency?</h4>
+            <p>Every site in my portfolio is one I built myself. Message me on WhatsApp right now — you'll get a reply from the person actually doing the work, not a call center.</p>
+          </div>
+        </div>
+
         <div style="margin-top:2.2rem" class="reveal">
+          <p style="font-size:0.95rem;color:var(--ink-soft);margin-bottom:0.9rem">If any of this sounds like what your school, clinic or business needs — the next step is simple. Just tell me about it.</p>
           <a href="https://wa.me/919003643649?text=Hi%20Vasumathi%2C%20I%20read%20your%20About%20page%20and%20want%20to%20talk%20about%20a%20website." target="_blank" class="btn btn-primary">💬 Let's Talk About Your Website</a>
+          <p style="margin-top:0.7rem;font-size:0.82rem;color:var(--ink-soft)">✓ Pay 50% only after you see your demo &nbsp; ✓ You own the domain &amp; hosting</p>
         </div>
       </div>
     </div>

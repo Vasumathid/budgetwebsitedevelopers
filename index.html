@@ -202,6 +202,7 @@
       animation: slideCycle 12s infinite;
     }
     .preview-slide img {
+      animation: kenBurns 12s ease-in-out infinite;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -252,10 +253,16 @@
       33% { background: var(--line); }
       100% { background: var(--line); }
     }
+    @keyframes kenBurns {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.06); }
+      100% { transform: scale(1); }
+    }
     @media (prefers-reduced-motion: reduce) {
       .preview-slide { animation: none; opacity: 0; }
       .preview-slide:first-child { opacity: 1; }
       .preview-dots span { animation: none; }
+      .preview-slide img { animation: none; }
     }
     .trust-strip {
       background: var(--white);
@@ -337,6 +344,10 @@
       color: rgba(255, 255, 255, 0.75);
       margin-bottom: 1.6rem;
     }
+    .faq-item { border-bottom:1px solid var(--line); padding:1rem 0; }
+    .faq-q { width:100%; text-align:left; background:none; border:none; font-weight:600; font-size:0.98rem; cursor:pointer; display:flex; justify-content:space-between; padding:0; color:var(--ink); }
+    .faq-a { max-height:0; overflow:hidden; transition:max-height 0.3s ease; font-size:0.88rem; color:var(--ink-soft); }
+    .faq-item.open .faq-a { max-height:220px; padding-top:0.7rem; }
   </style>
 </head>
 <body>
@@ -369,17 +380,18 @@
     <div class="wrap hero-inner">
       <div>
         <div class="eyebrow">Vellore, Tamil Nadu · Est. 2025</div>
-        <h1>Get More Customers With a Website That <em>Ranks</em> on Google.</h1>
+        <h1>Stop Losing Customers to the Competitor Who <em>Shows Up First</em> on Google.</h1>
         <p class="lead">
-          Custom websites for schools, hospitals, colleges and local businesses
-          across Tamil Nadu — built by an ex-Bangalore Senior Developer, priced
-          for local budgets, and set up from day one to bring in real enquiries.
+          Custom, mobile-first websites for schools, hospitals, colleges and
+          local businesses across Tamil Nadu — live in 7 days, priced for
+          local budgets, built and delivered directly by an ex-Bangalore
+          Senior Developer. No agency, no middlemen.
         </p>
         <div class="hero-btns">
-          <a href="https://wa.me/919003643649?text=Hi%20Vasumathi%2C%20I%20want%20a%20website%20for%20my%20business.%20Can%20we%20talk%3F" target="_blank" class="btn btn-primary">💬 Chat on WhatsApp</a>
+          <a href="https://wa.me/919003643649?text=Hi%20Vasumathi%2C%20I%20want%20a%20website%20for%20my%20business.%20Can%20we%20talk%3F" target="_blank" class="btn btn-primary">💬 Get My Free Quote on WhatsApp</a>
           <a href="services.html" class="btn btn-ghost">See Pricing →</a>
         </div>
-        <p class="hero-note">✓ Domain &amp; hosting handled &nbsp; ✓ Tamil + English &nbsp; ✓ No middlemen</p>
+        <p class="hero-note">✓ Pay 50% only after you see your demo &nbsp; ✓ You own the domain &amp; hosting &nbsp; ✓ Tamil + English support</p>
         <div class="badge-strip">
           <span class="tbadge">🔒 SSL Secure</span>
           <span class="tbadge">📱 Mobile Friendly</span>
@@ -406,7 +418,50 @@
     </div>
   </section>
 
-  <!-- LIVE SITE PREVIEW -->
+  <!-- PAIN POINTS -->
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">Sound Familiar?</div>
+      <h2 class="sec-title">Your customers are already searching. Right now, they can't find you.</h2>
+      <p class="sec-sub">This isn't a "someday" marketing problem — it's costing you real enquiries every single day you go without a website that actually works.</p>
+      <div class="trust-grid2 reveal">
+        <div class="trust-card">
+          <div class="ic">🔍</div>
+          <div>
+            <h4>Parents Google your school before they ever call.</h4>
+            <p>If nothing comes up — or an old Facebook page from 2019 does — you've already lost that admission to a school that simply looked more legitimate online.</p>
+          </div>
+        </div>
+        <div class="trust-card">
+          <div class="ic">🚶</div>
+          <div>
+            <h4>Someone searches for exactly what you sell — and finds a competitor instead.</h4>
+            <p>Without a site that shows up on Google, you're invisible to the customer actively looking for you right now, this week.</p>
+          </div>
+        </div>
+        <div class="trust-card">
+          <div class="ic">😩</div>
+          <div>
+            <h4>You asked a "website guy" for a quote once, and regretted it.</h4>
+            <p>Vague pricing, three weeks of silence, then a template that looks like every other local site. So you gave up and did nothing — again.</p>
+          </div>
+        </div>
+        <div class="trust-card">
+          <div class="ic">💸</div>
+          <div>
+            <h4>Agencies quote you like you're a corporate client.</h4>
+            <p>You don't need an app, a retainer, or a "brand strategy" deck. You need one honest, working website — and someone who actually replies when you message.</p>
+          </div>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:2rem;color:var(--ink-soft);font-size:0.95rem">
+        Here's the good news: fixing this doesn't take a big budget or a big agency. It takes one working website, built right, by someone you can message directly.
+      </p>
+      <p style="text-align:center;margin-top:1rem">
+        <a href="https://wa.me/919003643649?text=Hi%20Vasumathi%2C%20I%20want%20a%20website%20for%20my%20business.%20Can%20we%20talk%3F" target="_blank" class="btn btn-primary">💬 Tell Me What You Need</a>
+      </p>
+    </div>
+  </section>
   <section style="padding-top:0">
     <div class="wrap">
       <div class="eyebrow center" style="display:table;margin-left:auto;margin-right:auto">See It, Don't Just Read It</div>
@@ -591,6 +646,37 @@
           <div><a href="https://ravanaa.org" target="_blank" class="verify-chip">✓ Verified — visit site</a></div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background:var(--paper-d)">
+    <div class="wrap">
+      <div class="eyebrow">Questions People Ask Before Messaging Me</div>
+      <h2 class="sec-title">Straight answers, no sales pitch.</h2>
+      <div class="faq-item">
+        <button class="faq-q">I'm not very tech-savvy — will that be a problem? <span>+</span></button>
+        <div class="faq-a">Not at all. You send me your content on WhatsApp in plain language — I handle everything technical. Most clients never touch a hosting dashboard or a line of code.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you only build for schools and hospitals? <span>+</span></button>
+        <div class="faq-a">No — those are common clients, but I build for any local business: shops, services, colleges, professionals. If you serve customers in Tamil Nadu, this works for you.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What if I don't like the demo? <span>+</span></button>
+        <div class="faq-a">We revise it together until it's right — that's exactly what the 50% balance payment protects. You only pay in full once you've seen and approved your live site.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How do I know this isn't a scam? <span>+</span></button>
+        <div class="faq-a">Every portfolio site is live and clickable, my LinkedIn is public, and you WhatsApp or call me directly — there's no call center or hidden layer between you and the person doing the work.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you work outside Vellore? <span>+</span></button>
+        <div class="faq-a">Yes — everything is handled remotely over WhatsApp and call, so I work with clients across Tamil Nadu, not just Vellore.</div>
+      </div>
+      <p style="text-align:center;margin-top:2rem">
+        <a href="https://wa.me/919003643649?text=Hi%20Vasumathi%2C%20I%20have%20a%20question%20before%20I%20get%20started." target="_blank" class="btn btn-dark">💬 Ask Me Anything on WhatsApp</a>
+      </p>
     </div>
   </section>
 
