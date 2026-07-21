@@ -50,7 +50,7 @@ document.querySelectorAll(".faq-q").forEach((btn) => {
 
   const answers = {
     pricing:
-      "Starter (simple 5-page site) is ₹8,000–₹15,000. Growth (lead forms, WhatsApp integration, SEO) is ₹18,000–₹35,000. Custom (logins, payments, bookings) starts at ₹40,000, quoted after a quick scoping call. Exact price depends on pages and features.",
+      "Starter (essential online presence) starts at ₹18,000. Growth (lead forms, WhatsApp integration, SEO) starts at ₹30,000. Custom (logins, payments, bookings) starts at ₹80,000, quoted after a quick scoping call. Mobile apps are quoted separately based on your requirements. Every price depends on the functionality you need, not the number of pages.",
     delivery:
       "Starter sites deliver in 7–10 days, Growth in 12–18 days, both after complete requirements are received. Custom projects are timed individually based on scope.",
     chatbot:
