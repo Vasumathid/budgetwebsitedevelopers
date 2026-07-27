@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="xr7_4LVCiftgjp5NkGRvG96FTxHsi5VYuT93rpDKlVk" />
   <link rel="canonical" href="https://budgetwebsitedevelopersvellore.org/" />
-  <title>Website Designer in Vellore | Budget Website Developers — Custom Built</title>
+  <title>Website Designer for India & Worldwide Clients | Budget Website Developers</title>
   <meta
     name="description"
-    content="Custom, mobile-first websites for schools, hospitals, colleges & local businesses in Vellore, Arcot & across Tamil Nadu — customized to your requirements, live in 7-10 days."
+    content="Custom, mobile-first websites for schools, hospitals, colleges & local businesses across every state in India, and for clients worldwide — customized to your requirements, live in 7-10 days. Packages from ₹18,000 (India) / $400 (international)."
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link
@@ -25,7 +25,7 @@
         "@type": "LocalBusiness",
         "@id": "https://budgetwebsitedevelopersvellore.org/#business",
         "name": "Budget Website Developers",
-        "alternateName": "Budget Website Developers Vellore",
+        "alternateName": ["BWD Studio", "Budget Website Developers Vellore"],
         "description": "Professional website design for schools, clinics and local businesses across Tamil Nadu.",
         "url": "https://budgetwebsitedevelopersvellore.org/",
         "telephone": "+919003643649",
@@ -44,7 +44,21 @@
           "addressRegion": "Tamil Nadu",
           "addressCountry": "IN"
         },
-        "areaServed": [{ "@type": "State", "name": "Tamil Nadu" }],
+        "areaServed": [
+          { "@type": "Country", "name": "India" },
+          { "@type": "State", "name": "Tamil Nadu" },
+          { "@type": "State", "name": "Andhra Pradesh" },
+          { "@type": "State", "name": "Karnataka" },
+          { "@type": "State", "name": "Kerala" },
+          { "@type": "State", "name": "Telangana" },
+          { "@type": "State", "name": "Maharashtra" },
+          { "@type": "State", "name": "Delhi" },
+          { "@type": "State", "name": "Gujarat" },
+          { "@type": "State", "name": "Rajasthan" },
+          { "@type": "State", "name": "Uttar Pradesh" },
+          { "@type": "State", "name": "West Bengal" },
+          { "@type": "State", "name": "Punjab" }
+        ],
         "priceRange": "₹₹",
         "openingHours": "Mo-Sa 09:00-20:00",
         "sameAs": [
@@ -57,6 +71,19 @@
           "ratingValue": "5",
           "reviewCount": "2",
           "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "Remote Website Design & Development",
+        "provider": { "@id": "https://budgetwebsitedevelopersvellore.org/#business" },
+        "areaServed": { "@type": "Place", "name": "Worldwide" },
+        "description": "Custom website design and development delivered remotely for clients anywhere in the world, from an India-based developer.",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "USD",
+          "price": "400",
+          "url": "https://budgetwebsitedevelopersvellore.org/services.html"
         }
       }
     ]
@@ -208,6 +235,61 @@
         border-bottom: 1px solid rgba(245,241,230,0.18);
         padding-bottom: 0.9rem;
       }
+    }
+
+    /* ---------- TECH FEATURES (big, highlighted) ---------- */
+    .tech-section {
+      background: var(--teal);
+      color: var(--white);
+    }
+    .tech-section .eyebrow {
+      background: rgba(245,241,230,0.14);
+      color: var(--marigold);
+      border: 1px solid rgba(245,241,230,0.24);
+    }
+    .tech-section .eyebrow::before { color: var(--marigold); }
+    .tech-section h2 { color: var(--white); }
+    .tech-section .sec-sub { color: rgba(245,241,230,0.85); }
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.4rem;
+      margin-top: 1rem;
+    }
+    .tech-card {
+      background: rgba(245,241,230,0.06);
+      border: 1px solid rgba(245,241,230,0.16);
+      border-radius: var(--radius);
+      padding: 2rem 1.7rem;
+      transition: transform 0.18s ease, background 0.18s ease;
+    }
+    .tech-card:hover {
+      transform: translateY(-4px);
+      background: rgba(245,241,230,0.1);
+    }
+    .tech-card .tech-ic {
+      font-size: 2.1rem;
+      margin-bottom: 0.9rem;
+      display: block;
+    }
+    .tech-card .tech-term {
+      font-family: "Fraunces", serif;
+      font-weight: 700;
+      font-size: 1.55rem;
+      color: var(--marigold);
+      margin-bottom: 0.55rem;
+      line-height: 1.15;
+    }
+    .tech-card .tech-desc {
+      font-size: 0.95rem;
+      color: rgba(245,241,230,0.85);
+      line-height: 1.5;
+    }
+    @media (max-width: 860px) {
+      .tech-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 560px) {
+      .tech-grid { grid-template-columns: 1fr; }
     }
 
     .preview-wrap {
@@ -411,7 +493,7 @@
   <!-- NAV -->
   <nav class="site-nav">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo"><span class="dot"></span>Budget Website Developers</a>
+      <a href="index.html" class="nav-logo"><span class="dot"></span>BWD Studio</a>
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About Me</a></li>
@@ -451,8 +533,8 @@
         no middlemen, no template.
       </p>
       <div class="hero-price-tag">
-        <span class="amount">₹8,000 onwards</span>
-        <span class="label">Live site, ready to launch</span>
+        <span class="amount">₹18,000 onwards</span>
+        <span class="label">India · $400 onwards for international clients</span>
       </div>
       <div class="hero-btns">
         <a href="https://wa.me/919003643649?text=Hi%20Vasumathi%2C%20I%20want%20a%20website%20for%20my%20business.%20Can%20we%20talk%3F" target="_blank" class="btn btn-primary">💬 Get My Free Quote on WhatsApp</a>
@@ -464,6 +546,47 @@
         <div class="stat"><b>6+</b><span>Years Dev Exp.</span></div>
         <div class="stat"><b>7 Days*</b><span>Delivery</span></div>
         <div class="stat"><b>5.0★</b><span>Client Rating</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH FEATURES (big, highlighted) -->
+  <section class="tech-section">
+    <div class="wrap">
+      <div class="eyebrow center" style="display:table;margin-left:auto;margin-right:auto">Every Site, Standard</div>
+      <h2 class="sec-title center">Not just a design. A site built to actually get found.</h2>
+      <p class="sec-sub center">These aren't add-ons or upsells — every package, starting at ₹18,000, ships with all six of these, built in from day one.</p>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <span class="tech-ic">🔍</span>
+          <div class="tech-term">SEO Ready</div>
+          <div class="tech-desc">Meta tags, sitemap, structured data and keyword-targeted copy — so Google can actually find and understand your business, not just display a pretty page.</div>
+        </div>
+        <div class="tech-card">
+          <span class="tech-ic">🔒</span>
+          <div class="tech-term">SSL Secure</div>
+          <div class="tech-desc">HTTPS encryption on every page. Visitors see the padlock, not a "Not Secure" warning — which matters for trust and for Google ranking.</div>
+        </div>
+        <div class="tech-card">
+          <span class="tech-ic">📱</span>
+          <div class="tech-term">Mobile-First</div>
+          <div class="tech-desc">Most of your customers will find you on a phone, not a laptop. Every layout is built and tested for mobile first, desktop second.</div>
+        </div>
+        <div class="tech-card">
+          <span class="tech-ic">💬</span>
+          <div class="tech-term">WhatsApp Integrated</div>
+          <div class="tech-desc">Click-to-chat buttons built into the site, so an interested visitor can message you in one tap — no contact form, no waiting.</div>
+        </div>
+        <div class="tech-card">
+          <span class="tech-ic">⚡</span>
+          <div class="tech-term">Fast Loading</div>
+          <div class="tech-desc">Optimized images and clean code, not a bloated page builder — so it loads in seconds, not the 8-10 that make visitors leave.</div>
+        </div>
+        <div class="tech-card">
+          <span class="tech-ic">📊</span>
+          <div class="tech-term">Search Console Setup</div>
+          <div class="tech-desc">Google Search Console connected before handover, so you can see exactly what people search to find you — not guess.</div>
+        </div>
       </div>
     </div>
   </section>
@@ -701,6 +824,45 @@
     </div>
   </section>
 
+  <!-- HOW WE WORK TOGETHER -->
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">Before You Wire Any Money</div>
+      <h2 class="sec-title">Here's exactly how it works — and what happens after launch.</h2>
+      <p class="sec-sub">Working with a solo developer instead of an agency should mean faster and more honest — not riskier. Here's what protects you at every step.</p>
+      <div class="trust-grid2 reveal">
+        <div class="trust-card">
+          <div class="ic">📝</div>
+          <div>
+            <h4>1. A signed agreement, before anything else</h4>
+            <p>Every project — local or international — starts with a written client agreement covering scope, timeline and payment terms. Nothing is verbal-only.</p>
+          </div>
+        </div>
+        <div class="trust-card">
+          <div class="ic">💳</div>
+          <div>
+            <h4>2. 50% only after you approve the demo</h4>
+            <p>You see a live, working demo before the balance is due. If it's not right, we fix it first — you're never paying in full for something you haven't seen.</p>
+          </div>
+        </div>
+        <div class="trust-card">
+          <div class="ic">🛠️</div>
+          <div>
+            <h4>3. A defined support window, not a vague promise</h4>
+            <p>Every package includes a fixed free bug-fix window post-launch (15–30 days depending on tier), in writing — plus an optional maintenance retainer if you want ongoing help after that.</p>
+          </div>
+        </div>
+        <div class="trust-card">
+          <div class="ic">📞</div>
+          <div>
+            <h4>4. A real person, reachable — not a ticket queue</h4>
+            <p>You're not routed through support tiers. You have my direct WhatsApp and phone number, and I reply personally — the same person who built your site.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FAQ -->
   <section style="background:var(--paper-d)">
     <div class="wrap">
@@ -712,7 +874,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-q">Do you only build for schools and hospitals? <span>+</span></button>
-        <div class="faq-a">No — those are common clients, but I build for any local business: shops, services, colleges, professionals. If you serve customers in Tamil Nadu, this works for you.</div>
+        <div class="faq-a">No — those are common clients, but I build for any business: shops, services, colleges, professionals. Whether you're in Tamil Nadu, anywhere else in India, or outside India entirely, this works for you.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q">What if I don't like the demo? <span>+</span></button>
@@ -723,8 +885,8 @@
         <div class="faq-a">Every portfolio site is live and clickable, my LinkedIn is public, and you WhatsApp or call me directly — there's no call center or hidden layer between you and the person doing the work.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">Do you work outside Vellore? <span>+</span></button>
-        <div class="faq-a">Yes — my main focus is schools, clinics and businesses across Tamil Nadu, but everything is handled remotely over WhatsApp, call and email, so I also take on clients anywhere in India or worldwide.</div>
+        <button class="faq-q">Do you only work with clients in Tamil Nadu? <span>+</span></button>
+        <div class="faq-a">Not anymore — everything is handled remotely over WhatsApp, call and email, so I take on clients across every state in India, and internationally too. Tamil Nadu is simply where I'm physically based.</div>
       </div>
       <p style="text-align:center;margin-top:2rem">
         <a href="https://wa.me/919003643649?text=Hi%20Vasumathi%2C%20I%20have%20a%20question%20before%20I%20get%20started." target="_blank" class="btn btn-dark">💬 Ask Me Anything on WhatsApp</a>
@@ -748,15 +910,54 @@
   <section style="background:var(--paper-d)">
     <div class="wrap">
       <div class="eyebrow center" style="display:table;margin-left:auto;margin-right:auto">Where I Work</div>
-      <h2 class="sec-title center">Website Design Services Across Tamil Nadu</h2>
-      <p class="sec-sub center">Website designer in Vellore and website developer in Arcot, building school website development, hospital website design, college website design and local SEO services in Vellore and nearby towns.</p>
+      <h2 class="sec-title center">Website Design Services Across India — and Worldwide</h2>
+      <p class="sec-sub center">Based in Tamil Nadu, working remotely with schools, hospitals, colleges and local businesses in every Indian state, plus clients outside India who want an honest, directly-built website without agency overhead.</p>
       <div class="keyword-strip">
-        <span class="keyword-pill">Website Designer in Vellore</span>
-        <span class="keyword-pill">Website Developer in Arcot</span>
         <span class="keyword-pill">School Website Development</span>
         <span class="keyword-pill">Hospital Website Design</span>
         <span class="keyword-pill">College Website Design</span>
-        <span class="keyword-pill">SEO Services in Vellore</span>
+        <span class="keyword-pill">SEO Services in Tamil Nadu</span>
+        <span class="keyword-pill">Website Designer in Vellore</span>
+        <span class="keyword-pill">Website Developer in Arcot</span>
+      </div>
+      <p class="sec-sub center" style="margin-top:2.4rem;font-weight:600;color:var(--teal)">Serving clients across every state and union territory in India</p>
+      <div class="keyword-strip">
+        <span class="keyword-pill">Tamil Nadu</span>
+        <span class="keyword-pill">Karnataka</span>
+        <span class="keyword-pill">Andhra Pradesh</span>
+        <span class="keyword-pill">Telangana</span>
+        <span class="keyword-pill">Kerala</span>
+        <span class="keyword-pill">Maharashtra</span>
+        <span class="keyword-pill">Delhi NCR</span>
+        <span class="keyword-pill">Gujarat</span>
+        <span class="keyword-pill">Rajasthan</span>
+        <span class="keyword-pill">Punjab</span>
+        <span class="keyword-pill">Uttar Pradesh</span>
+        <span class="keyword-pill">West Bengal</span>
+        <span class="keyword-pill">Madhya Pradesh</span>
+        <span class="keyword-pill">Bihar</span>
+        <span class="keyword-pill">Odisha</span>
+        <span class="keyword-pill">Haryana</span>
+        <span class="keyword-pill">Assam</span>
+        <span class="keyword-pill">Chhattisgarh</span>
+        <span class="keyword-pill">Jharkhand</span>
+        <span class="keyword-pill">Uttarakhand</span>
+        <span class="keyword-pill">Himachal Pradesh</span>
+        <span class="keyword-pill">Goa</span>
+        <span class="keyword-pill">Jammu &amp; Kashmir</span>
+        <span class="keyword-pill">Chandigarh</span>
+        <span class="keyword-pill">Puducherry</span>
+        <span class="keyword-pill">+ every other state &amp; UT</span>
+      </div>
+      <p class="sec-sub center" style="margin-top:2.4rem;font-weight:600;color:var(--teal)">Plus international clients</p>
+      <div class="keyword-strip">
+        <span class="keyword-pill">USA</span>
+        <span class="keyword-pill">UK</span>
+        <span class="keyword-pill">Canada</span>
+        <span class="keyword-pill">UAE &amp; Gulf</span>
+        <span class="keyword-pill">Australia</span>
+        <span class="keyword-pill">Singapore</span>
+        <span class="keyword-pill">Worldwide, Remote</span>
       </div>
     </div>
   </section>
@@ -765,8 +966,9 @@
   <footer>
     <div class="wrap footer-grid">
       <div>
-        <div class="footer-logo">Budget Website Developers</div>
-        <p style="font-size:0.85rem;max-width:280px">Affordable, professional websites — customized to your requirements — for schools, clinics &amp; local businesses across Tamil Nadu.</p>
+        <div class="footer-logo">BWD Studio</div>
+        <div class="footer-legal-name">Budget Website Developers &middot; Tamil Nadu, India</div>
+        <p style="font-size:0.85rem;max-width:280px">Affordable, professional websites — customized to your requirements — for schools, clinics &amp; businesses across every state in India, and worldwide.</p>
       </div>
       <div>
         <h4>Quick Links</h4>
