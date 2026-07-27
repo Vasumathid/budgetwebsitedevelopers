@@ -93,7 +93,7 @@
     /* ---------- BIG FULL-BLEED HERO ---------- */
     .hero-big {
       position: relative;
-      min-height: 92vh;
+      min-height: 78vh;
       display: flex;
       align-items: flex-end;
       overflow: hidden;
@@ -112,7 +112,7 @@
       object-fit: cover;
       object-position: top;
       animation: kenBurns 16s ease-in-out infinite alternate;
-      filter: saturate(1.05) contrast(1.02);
+      filter: saturate(0.75) brightness(0.8) blur(4px);
     }
     .hero-bg img:nth-child(2) { animation-delay: 0.6s; }
     .hero-bg img:nth-child(3) { animation-delay: 1.2s; }
@@ -120,15 +120,13 @@
     .hero-scrim {
       position: absolute;
       inset: 0;
-      background:
-        linear-gradient(to top, rgba(9,28,23,0.95) 0%, rgba(9,28,23,0.78) 30%, rgba(9,28,23,0.4) 60%, rgba(9,28,23,0.55) 100%),
-        linear-gradient(to right, rgba(9,28,23,0.6), transparent 58%);
+      background: linear-gradient(to top, rgba(9,28,23,0.92) 0%, rgba(9,28,23,0.62) 45%, rgba(9,28,23,0.42) 100%);
     }
     .hero-big-content {
       position: relative;
       z-index: 2;
       width: 100%;
-      padding: 6rem 0 4rem;
+      padding: 4.5rem 0 3.2rem;
     }
     .hero-big .eyebrow {
       background: rgba(245,241,230,0.12);
@@ -525,30 +523,21 @@
     <div class="hero-scrim"></div>
     <div class="wrap hero-big-content">
       <div class="eyebrow">Tamil Nadu · India · Worldwide · Est. 2025</div>
-      <h1>Stop Losing Customers to the Competitor Who <em>Shows Up First</em> on Google.</h1>
-      <p class="lead">
-        Custom, mobile-first websites for schools, hospitals, colleges and
-        local businesses — live in 7 days, priced honestly, built and
-        delivered directly by an ex-Bangalore Senior Developer. No agency,
-        no middlemen, no template.
-      </p>
-      <div class="hero-price-tag">
-        <span class="amount">₹18,000 onwards</span>
-        <span class="label">India · $400 onwards for international clients</span>
-      </div>
+      <h1>Stop Losing Customers to the Competitor Who <em>Shows Up First</em>.</h1>
+      <p class="lead">Custom, mobile-first websites — live in 7 days, built and delivered personally. No agency, no template.</p>
       <div class="hero-btns">
         <a href="https://wa.me/919003643649?text=Hi%20Vasumathi%2C%20I%20want%20a%20website%20for%20my%20business.%20Can%20we%20talk%3F" target="_blank" class="btn btn-primary">💬 Get My Free Quote on WhatsApp</a>
         <a href="services.html" class="btn btn-ghost">See Pricing →</a>
       </div>
-      <p class="hero-note">✓ Pay 50% only after you see your demo &nbsp; ✓ You own the domain &amp; hosting &nbsp; ✓ Tamil + English support</p>
       <div class="hero-stats-bar">
+        <div class="stat"><b>₹18k / $400</b><span>Starting Price</span></div>
         <div class="stat"><b>4+</b><span>Live Client Sites</span></div>
-        <div class="stat"><b>6+</b><span>Years Dev Exp.</span></div>
         <div class="stat"><b>7 Days*</b><span>Delivery</span></div>
         <div class="stat"><b>5.0★</b><span>Client Rating</span></div>
       </div>
     </div>
   </section>
+
 
   <!-- TECH FEATURES (big, highlighted) -->
   <section class="tech-section">
