@@ -63,100 +63,153 @@
   }
   </script>
   <style>
-    .hero {
-      padding: 4rem 0 5rem;
+    /* ---------- BIG FULL-BLEED HERO ---------- */
+    .hero-big {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      color: var(--white);
     }
-    .hero-inner {
+    .hero-bg {
+      position: absolute;
+      inset: 0;
       display: grid;
-      grid-template-columns: 1.15fr 1fr;
-      gap: 3.5rem;
-      align-items: center;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
     }
-    .hero h1 {
-      font-size: clamp(2.3rem, 4.6vw, 3.4rem);
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      animation: kenBurns 16s ease-in-out infinite alternate;
+      filter: saturate(1.05) contrast(1.02);
+    }
+    .hero-bg img:nth-child(2) { animation-delay: 0.6s; }
+    .hero-bg img:nth-child(3) { animation-delay: 1.2s; }
+    .hero-bg img:nth-child(4) { animation-delay: 1.8s; }
+    .hero-scrim {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to top, rgba(9,28,23,0.95) 0%, rgba(9,28,23,0.78) 30%, rgba(9,28,23,0.4) 60%, rgba(9,28,23,0.55) 100%),
+        linear-gradient(to right, rgba(9,28,23,0.6), transparent 58%);
+    }
+    .hero-big-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding: 6rem 0 4rem;
+    }
+    .hero-big .eyebrow {
+      background: rgba(245,241,230,0.12);
+      color: var(--marigold);
+      border: 1px solid rgba(245,241,230,0.28);
+      backdrop-filter: blur(6px);
+    }
+    .hero-big .eyebrow::before { color: var(--marigold); }
+    .hero-big h1 {
+      font-size: clamp(2.4rem, 5.6vw, 4rem);
+      max-width: 16ch;
+      color: var(--white);
+      text-shadow: 0 6px 26px rgba(0,0,0,0.35);
       margin-bottom: 1.1rem;
     }
-    .hero h1 em {
+    .hero-big h1 em {
       font-style: normal;
-      color: var(--teal-l);
-      border-bottom: 4px solid var(--marigold);
+      color: var(--marigold);
     }
-    .hero p.lead {
-      font-size: 1.08rem;
-      color: var(--ink-soft);
-      max-width: 480px;
-      margin-bottom: 1.8rem;
+    .hero-big p.lead {
+      font-size: 1.12rem;
+      color: rgba(245,241,230,0.88);
+      max-width: 54ch;
+      margin-bottom: 1.6rem;
     }
     .hero-btns {
       display: flex;
       gap: 0.9rem;
       flex-wrap: wrap;
-      margin-bottom: 1.6rem;
+      margin-bottom: 1.4rem;
+    }
+    .hero-big .btn-ghost {
+      border-color: rgba(245,241,230,0.5);
+      color: var(--white);
+      background: rgba(245,241,230,0.08);
+    }
+    .hero-big .btn-ghost:hover {
+      background: rgba(245,241,230,0.16);
+      border-color: var(--white);
+      color: var(--white);
     }
     .hero-note {
       font-size: 0.82rem;
-      color: var(--ink-soft);
+      color: rgba(245,241,230,0.75);
       font-family: "IBM Plex Mono", monospace;
+      margin-bottom: 1.8rem;
     }
-    .hero-card {
-      background: var(--white);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-lg);
-      border: 1px solid var(--line);
-      padding: 2rem 1.8rem;
-      text-align: center;
+    .hero-price-tag {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      background: rgba(9,28,23,0.4);
+      border: 1.5px dashed var(--marigold);
+      padding: 0.7rem 1.2rem;
+      border-radius: 12px;
+      backdrop-filter: blur(6px);
+      margin-bottom: 2.2rem;
     }
-    .hc-photo {
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin: 0 auto 1rem;
-      border: 3px solid var(--marigold);
-    }
-    .hc-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .hc-name {
+    .hero-price-tag .amount {
       font-family: "Fraunces", serif;
-      font-size: 1.15rem;
+      font-size: 1.5rem;
       font-weight: 700;
+      color: var(--marigold);
     }
-    .hc-role {
-      font-size: 0.82rem;
-      color: var(--ink-soft);
-      margin-bottom: 0.6rem;
+    .hero-price-tag .label {
+      font-size: 0.75rem;
+      color: rgba(245,241,230,0.8);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
     }
-    .hc-stars {
-      color: var(--marigold-d);
-      font-size: 0.95rem;
-      margin-bottom: 1.3rem;
-    }
-    .hc-stars span {
-      display: block;
-      color: var(--ink-soft);
-      font-size: 0.72rem;
-      font-family: "IBM Plex Sans", sans-serif;
-      margin-top: 0.15rem;
-    }
-    .hc-stats {
+    .hero-stats-bar {
+      position: relative;
+      z-index: 2;
       display: flex;
-      justify-content: space-around;
-      border-top: 1px dashed var(--line);
-      padding-top: 1.1rem;
+      border-top: 1px solid rgba(245,241,230,0.18);
+      margin-top: 1rem;
     }
-    .hc-stats .n {
-      font-family: "Fraunces", serif;
-      font-size: 1.4rem;
-      color: var(--teal);
+    .hero-stats-bar .stat {
+      flex: 1;
+      padding: 1.3rem 0 0;
+      border-right: 1px solid rgba(245,241,230,0.18);
+    }
+    .hero-stats-bar .stat:last-child { border-right: none; }
+    .hero-stats-bar .stat b {
       display: block;
+      font-family: "Fraunces", serif;
+      font-size: 1.5rem;
+      color: var(--marigold);
     }
-    .hc-stats .l {
-      font-size: 0.72rem;
-      color: var(--ink-soft);
+    .hero-stats-bar .stat span {
+      font-size: 0.78rem;
+      color: rgba(245,241,230,0.75);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
+    @media (max-width: 720px) {
+      .hero-big { min-height: 82vh; }
+      .hero-bg { grid-template-columns: 1fr; }
+      .hero-bg img:not(:first-child) { display: none; }
+      .hero-stats-bar { flex-wrap: wrap; }
+      .hero-stats-bar .stat {
+        flex: 1 1 50%;
+        border-right: none;
+        border-bottom: 1px solid rgba(245,241,230,0.18);
+        padding-bottom: 0.9rem;
+      }
+    }
+
     .preview-wrap {
       max-width: 780px;
       margin: 0 auto;
@@ -294,9 +347,6 @@
       color: var(--ink-soft);
     }
     @media (max-width: 720px) {
-      .hero-inner {
-        grid-template-columns: 1fr;
-      }
       .trust-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -383,44 +433,37 @@
   </nav>
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="wrap hero-inner">
-      <div>
-        <div class="eyebrow">Vellore, Tamil Nadu · Est. 2025</div>
-        <h1>Stop Losing Customers to the Competitor Who <em>Shows Up First</em> on Google.</h1>
-        <p class="lead">
-          Custom, mobile-first websites for schools, hospitals, colleges and
-          local businesses across Tamil Nadu — live in 7 days, priced for
-          local budgets, built and delivered directly by an ex-Bangalore
-          Senior Developer. No agency, no middlemen.
-        </p>
-        <div class="hero-btns">
-          <a href="https://wa.me/919003643649?text=Hi%20Vasumathi%2C%20I%20want%20a%20website%20for%20my%20business.%20Can%20we%20talk%3F" target="_blank" class="btn btn-primary">💬 Get My Free Quote on WhatsApp</a>
-          <a href="services.html" class="btn btn-ghost">See Pricing →</a>
-        </div>
-        <p class="hero-note">✓ Pay 50% only after you see your demo &nbsp; ✓ You own the domain &amp; hosting &nbsp; ✓ Tamil + English support</p>
-        <div class="badge-strip">
-          <span class="tbadge">🔒 SSL Secure</span>
-          <span class="tbadge">📱 Mobile Friendly</span>
-          <span class="tbadge">🔍 SEO Ready</span>
-          <span class="tbadge">💬 WhatsApp Support</span>
-          <span class="tbadge">⚡ Fast Loading</span>
-          <span class="tbadge">📊 Search Console Setup</span>
-        </div>
+  <section class="hero-big">
+    <div class="hero-bg">
+      <img src="images/school.PNG" alt="School website built by Budget Website Developers" />
+      <img src="images/hospital.PNG" alt="Hospital website built by Budget Website Developers" />
+      <img src="images/ssswomens.png" alt="College website built by Budget Website Developers" />
+      <img src="images/ravanaa.PNG" alt="Local business website built by Budget Website Developers" />
+    </div>
+    <div class="hero-scrim"></div>
+    <div class="wrap hero-big-content">
+      <div class="eyebrow">Tamil Nadu · India · Worldwide · Est. 2025</div>
+      <h1>Stop Losing Customers to the Competitor Who <em>Shows Up First</em> on Google.</h1>
+      <p class="lead">
+        Custom, mobile-first websites for schools, hospitals, colleges and
+        local businesses — live in 7 days, priced honestly, built and
+        delivered directly by an ex-Bangalore Senior Developer. No agency,
+        no middlemen, no template.
+      </p>
+      <div class="hero-price-tag">
+        <span class="amount">₹8,000 onwards</span>
+        <span class="label">Live site, ready to launch</span>
       </div>
-      <div class="hero-card reveal">
-        <div class="hc-photo">
-          <img src="images/vasu.png" alt="Vasumathi Dulasidaran, Founder of Budget Website Developers" />
-        </div>
-        <div class="hc-name">Vasumathi Dulasidaran</div>
-        <div class="hc-role">Founder &amp; Senior Developer, Vellore</div>
-        <div class="hc-stars">★★★★★ <span>5.0 from real clients</span></div>
-        <div class="hc-stats">
-          <div><span class="n">6+</span><span class="l">Years Exp.</span></div>
-          <div><span class="n">✓</span><span class="l">Live &amp; Verified</span></div>
-          <div><span class="n">7 Days*</span><span class="l">Delivery</span></div>
-        </div>
-        <a href="https://wa.me/919003643649?text=Hi%20Vasumathi%2C%20I%20want%20a%20website%20for%20my%20business.%20Can%20we%20talk%3F" target="_blank" class="btn btn-dark" style="width:100%;justify-content:center;margin-top:1rem">💬 Message Me Directly</a>
+      <div class="hero-btns">
+        <a href="https://wa.me/919003643649?text=Hi%20Vasumathi%2C%20I%20want%20a%20website%20for%20my%20business.%20Can%20we%20talk%3F" target="_blank" class="btn btn-primary">💬 Get My Free Quote on WhatsApp</a>
+        <a href="services.html" class="btn btn-ghost">See Pricing →</a>
+      </div>
+      <p class="hero-note">✓ Pay 50% only after you see your demo &nbsp; ✓ You own the domain &amp; hosting &nbsp; ✓ Tamil + English support</p>
+      <div class="hero-stats-bar">
+        <div class="stat"><b>4+</b><span>Live Client Sites</span></div>
+        <div class="stat"><b>6+</b><span>Years Dev Exp.</span></div>
+        <div class="stat"><b>7 Days*</b><span>Delivery</span></div>
+        <div class="stat"><b>5.0★</b><span>Client Rating</span></div>
       </div>
     </div>
   </section>

@@ -963,3 +963,114 @@ footer {
     bottom: 10.4rem;
   }
 }
+
+/* ============================================================
+   MODERN COMPONENTS — adapted from React Bits (reactbits.dev)
+   patterns for this design system: a pointer-tracked tilt +
+   glow "profile card" (used for Vasu's own photo — the one
+   place a flashy effect earns its keep), and a quieter
+   pointer-tracked spotlight for proof/portfolio cards.
+   Colors pull from the existing palette (marigold/teal), not
+   the library's default purple-blue, so it reads as part of
+   the receipt/courier system rather than a bolted-on widget.
+   ============================================================ */
+
+/* ---------- TILT + GLOW PROFILE CARD ---------- */
+.tilt-card-wrap {
+  perspective: 900px;
+  --mx: 50%;
+  --my: 40%;
+}
+
+.tilt-card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.tilt-card-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -10%;
+  z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at var(--mx) var(--my),
+    rgba(232, 163, 61, 0.5),
+    transparent 62%
+  );
+  opacity: 0;
+  filter: blur(28px);
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.tilt-card-wrap.tc-active::before {
+  opacity: 1;
+}
+
+.tc-sheen {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  background: radial-gradient(
+    circle at var(--mx) var(--my),
+    rgba(255, 255, 255, 0.55),
+    transparent 55%
+  );
+  mix-blend-mode: overlay;
+}
+
+.tilt-card-wrap.tc-active .tc-sheen {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tilt-card {
+    transition: none;
+    transform: none !important;
+  }
+  .tilt-card-wrap::before,
+  .tc-sheen {
+    transition: none;
+  }
+}
+
+/* ---------- SPOTLIGHT HOVER CARD (proof / portfolio / pricing) ---------- */
+.spot-card {
+  position: relative;
+  overflow: hidden;
+  --sx: 50%;
+  --sy: 50%;
+}
+
+.spot-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: radial-gradient(
+    260px circle at var(--sx) var(--sy),
+    rgba(232, 163, 61, 0.18),
+    transparent 65%
+  );
+}
+
+.spot-card:hover::after,
+.spot-card:focus-within::after {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spot-card::after {
+    display: none;
+  }
+}

@@ -118,3 +118,73 @@ if (leadForm) {
     );
   });
 }
+
+// Tilt + glow profile card — vanilla-JS adaptation of the React Bits
+// ProfileCard interaction (pointer-tracked 3D tilt + radial glow),
+// re-themed to this site's marigold/teal palette instead of the
+// component's default purple-blue holographic look.
+(function () {
+  const wraps = document.querySelectorAll(".tilt-card-wrap");
+  if (!wraps.length) return;
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
+  if (reduceMotion) return;
+
+  const MAX_TILT = 9;
+
+  wraps.forEach((wrap) => {
+    const card = wrap.querySelector(".tilt-card");
+    if (!card) return;
+
+    function onMove(e) {
+      const rect = wrap.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const px = Math.min(Math.max((x / rect.width) * 100, 0), 100);
+      const py = Math.min(Math.max((y / rect.height) * 100, 0), 100);
+      const rotateY = ((x / rect.width) - 0.5) * MAX_TILT * 2;
+      const rotateX = -((y / rect.height) - 0.5) * MAX_TILT * 2;
+      card.style.transition = "none";
+      card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      wrap.style.setProperty("--mx", px + "%");
+      wrap.style.setProperty("--my", py + "%");
+      wrap.classList.add("tc-active");
+    }
+
+    function onLeave() {
+      card.style.transition = "";
+      card.style.transform = "rotateX(0deg) rotateY(0deg)";
+      wrap.classList.remove("tc-active");
+    }
+
+    wrap.addEventListener("pointermove", onMove);
+    wrap.addEventListener("pointerleave", onLeave);
+    wrap.addEventListener("pointercancel", onLeave);
+  });
+})();
+
+// Spotlight hover cards — vanilla-JS adaptation of the React Bits
+// SpotlightCard pattern, used on proof/portfolio/pricing cards.
+(function () {
+  const cards = document.querySelectorAll(".spot-card");
+  if (!cards.length) return;
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
+  if (reduceMotion) return;
+
+  cards.forEach((el) => {
+    el.addEventListener("pointermove", (e) => {
+      const rect = el.getBoundingClientRect();
+      el.style.setProperty(
+        "--sx",
+        ((e.clientX - rect.left) / rect.width) * 100 + "%",
+      );
+      el.style.setProperty(
+        "--sy",
+        ((e.clientY - rect.top) / rect.height) * 100 + "%",
+      );
+    });
+  });
+})();
