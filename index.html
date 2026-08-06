@@ -90,6 +90,57 @@
   }
   </script>
   <style>
+    /* ---------- FOUNDER PULL-QUOTE BAND ---------- */
+    .founder-band { background: var(--teal-pale); padding: 3.4rem 0; }
+    .founder-band-grid {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 2.2rem;
+      align-items: center;
+    }
+    .founder-photo img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 50%;
+      border: 4px solid var(--white);
+      box-shadow: var(--shadow-lg);
+    }
+    .founder-eyebrow {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.6rem;
+    }
+    .founder-quote {
+      font-family: "Fraunces", serif;
+      font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.35;
+      margin: 0 0 0.6rem;
+    }
+    .founder-byline {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--teal-l);
+      margin-bottom: 0.7rem;
+    }
+    .founder-sub {
+      font-size: 0.92rem;
+      color: var(--ink-soft);
+      max-width: 56ch;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 640px) {
+      .founder-band-grid { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+      .founder-photo img { width: 120px; }
+    }
+
     /* ---------- BIG FULL-BLEED HERO ---------- */
     .hero-big {
       position: relative;
@@ -534,6 +585,22 @@
         <div class="stat"><b>4+</b><span>Live Client Sites</span></div>
         <div class="stat"><b>7 Days*</b><span>Delivery</span></div>
         <div class="stat"><b>5.0★</b><span>Client Rating</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER PULL-QUOTE -->
+  <section class="founder-band">
+    <div class="wrap founder-band-grid">
+      <div class="founder-photo reveal">
+        <img src="images/vasu.png" alt="Vasumathi Dulasidaran, founder of Budget Website Developers" />
+      </div>
+      <div class="founder-quote-wrap reveal">
+        <div class="founder-eyebrow">The Person Behind Every Site</div>
+        <blockquote class="founder-quote">"You talk to me, and I build your site myself."</blockquote>
+        <p class="founder-byline">Vasumathi Dulasidaran · Founder, Budget Website Developers</p>
+        <p class="founder-sub">Six years as a Senior Software Developer in Bangalore, now building websites for schools, hospitals and businesses across Tamil Nadu — personally, not through a team.</p>
+        <a href="about.html" class="verify-chip">✓ Read my full story →</a>
       </div>
     </div>
   </section>
