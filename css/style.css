@@ -141,11 +141,12 @@ section {
 .nav-logo {
   font-family: "Fraunces", serif;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   color: var(--teal);
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  white-space: nowrap;
 }
 
 .nav-logo .dot {
@@ -232,6 +233,18 @@ section {
   padding: 0.75rem 0;
   border-bottom: 1px solid var(--line);
   font-weight: 500;
+}
+
+@media (max-width: 1100px) and (min-width: 861px) {
+  .nav-logo {
+    font-size: 0.92rem;
+  }
+  .nav-links {
+    gap: 1.1rem;
+  }
+  .nav-links a {
+    font-size: 0.82rem;
+  }
 }
 
 @media (max-width: 860px) {
@@ -919,6 +932,13 @@ footer {
   border: 1px solid var(--line);
   padding: 0.35rem 0.8rem;
   border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+a.keyword-pill:hover {
+  background: var(--teal);
+  color: var(--white);
 }
 
 /* ---------- MOBILE STICKY CALL / WHATSAPP BAR ---------- */
@@ -968,4 +988,142 @@ footer {
   .bot-panel {
     bottom: 10.4rem;
   }
+}
+/* ============================================================
+   GLOBAL RESPONSIVE SAFETY NET
+   Catches small-screen issues not covered by per-component
+   breakpoints above: overflow, tap targets, tables, long text.
+   ============================================================ */
+
+/* Prevent any element from forcing horizontal scroll on the page */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Images and media never overflow their container */
+img, video, svg, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Any table not already wrapped gets a horizontal scroll instead of
+   breaking layout on narrow screens */
+table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Long words/URLs (e.g. in testimonials or footer text) wrap instead
+   of overflowing their container on narrow screens */
+p, li, h1, h2, h3, h4, .nav-links a, .footer-grid a {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Tap targets: ensure links/buttons stay comfortably tappable on
+   touch screens (Apple/Google guidance: ~44px minimum) */
+@media (max-width: 720px) {
+  .nav-links a,
+  .mobile-panel a,
+  .btn,
+  .nav-cta,
+  .faq-q,
+  .bot-chip {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* Smallest phones (<= 400px): tighten padding and font sizes further
+   so nothing feels cramped or clipped */
+@media (max-width: 400px) {
+  .wrap {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  h1 {
+    font-size: clamp(1.6rem, 8vw, 2rem) !important;
+  }
+  .btn, .nav-cta {
+    padding: 0.7rem 1.1rem;
+    font-size: 0.85rem;
+  }
+  .mobile-cta-bar .mcta-btn {
+    font-size: 0.78rem;
+    padding: 0.75rem 0.4rem;
+  }
+}
+
+/* Any remaining multi-column grid without an explicit mobile
+   override collapses to a single column below 600px, as a fallback */
+@media (max-width: 600px) {
+  .blog-grid,
+  .values-grid,
+  .core-values,
+  .mv-grid,
+  .tier-mini,
+  .addon-grid,
+  .pr-grid,
+  .trust-grid2,
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Floating WhatsApp/chat buttons: keep clear of the mobile sticky
+   call/WhatsApp bar and off small-screen edges */
+@media (max-width: 480px) {
+  .wa-float, .bot-float, .bot-panel {
+    right: 1rem;
+  }
+  .bot-panel {
+    width: calc(100vw - 2rem);
+    max-width: 340px;
+  }
+}
+
+/* ============================================================
+   "WHO I BUILD FOR" SECTION (homepage)
+   ============================================================ */
+.who-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+  margin-top: 2rem;
+}
+.who-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.6rem 1.4rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.who-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.who-ic {
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+}
+.who-card h3 {
+  font-family: "Fraunces", serif;
+  font-size: 1.08rem;
+  margin-bottom: 0.4rem;
+}
+.who-card p {
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+@media (max-width: 860px) {
+  .who-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .who-grid { grid-template-columns: 1fr; }
 }

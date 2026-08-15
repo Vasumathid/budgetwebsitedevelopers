@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="xr7_4LVCiftgjp5NkGRvG96FTxHsi5VYuT93rpDKlVk" />
   <link rel="canonical" href="https://budgetwebsitedevelopersvellore.org/" />
-  <title>Vasumathi Dulasidaran | School & College Website Designer, Tamil Nadu</title>
+  <title>Website Designer for Any Business — Cafes, Shops, Startups & More | Budget Website Developers</title>
   <meta
     name="description"
-    content="Websites for schools, colleges & institutions in Tamil Nadu — built personally by Vasumathi Dulasidaran, not an agency. Live in 7-10 days, from ₹18,000. See real client sites and results before you pay a rupee."
+    content="Custom websites for restaurants, cafes, shops, startups, schools & clinics — anywhere in the world. Built personally by Vasumathi Dulasidaran, not an agency. Live in 7 days, from ₹18,000. See real client sites before you pay a rupee."
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link
@@ -25,8 +25,8 @@
         "@type": "LocalBusiness",
         "@id": "https://budgetwebsitedevelopersvellore.org/#business",
         "name": "Budget Website Developers",
-        "alternateName": ["BWD Studio", "Budget Website Developers Vellore"],
-        "description": "Professional website design for schools, clinics and local businesses across Tamil Nadu.",
+        "alternateName": ["Budget Website Developers", "Budget Website Developers Vellore"],
+        "description": "Professional website design for restaurants, cafes, shops, startups, schools and clinics — in India and worldwide.",
         "url": "https://budgetwebsitedevelopersvellore.org/",
         "telephone": "+919003643649",
         "founder": {
@@ -62,7 +62,6 @@
         "priceRange": "₹₹",
         "openingHours": "Mo-Sa 09:00-20:00",
         "sameAs": [
-          "https://budgetwebsitedevelopers.blogspot.com/",
           "https://www.linkedin.com/in/vasumathi-dulasidaran-817b8784/",
           "https://www.instagram.com/letslearnsomeindianlanguages"
         ],
@@ -85,6 +84,29 @@
           "price": "400",
           "url": "https://budgetwebsitedevelopersvellore.org/services.html"
         }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you only build for schools and hospitals?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No — those are common clients, but I build for any business: restaurants, cafes, retail shops, startups, colleges, professionals. Whether you're in Tamil Nadu, anywhere else in India, or outside India entirely, this works for you." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I know this isn't a scam?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Every portfolio site is live and clickable, my LinkedIn is public, and you WhatsApp or call me directly — there's no call center or hidden layer between you and the person doing the work." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you only work with clients in Tamil Nadu?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Not anymore — everything is handled remotely over WhatsApp, call and email, so I take on clients across every state in India, and internationally too. Tamil Nadu is simply where I'm physically based." }
       }
     ]
   }
@@ -141,43 +163,100 @@
       .founder-photo img { width: 120px; }
     }
 
-    /* ---------- BIG FULL-BLEED HERO ---------- */
+    /* ---------- HERO: text-led, small framed photo ---------- */
     .hero-big {
       position: relative;
-      min-height: 78vh;
-      display: flex;
-      align-items: flex-end;
-      overflow: hidden;
+      background: var(--teal);
       color: var(--white);
+      overflow: hidden;
+      padding: 4.2rem 0 3rem;
     }
-    .hero-bg {
+    .hero-big::before {
+      content: "";
       position: absolute;
       inset: 0;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(232,163,61,0.14) 0%, transparent 45%),
+        radial-gradient(circle at 10% 90%, rgba(28,111,92,0.5) 0%, transparent 55%);
+      pointer-events: none;
     }
-    .hero-bg img {
+    .hero-content-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 4.2fr 1fr;
+      gap: 2.6rem;
+      align-items: center;
+    }
+    .hero-photo-card {
+      position: relative;
+      justify-self: center;
+    }
+    .hero-photo-card img {
       width: 100%;
-      height: 100%;
+      max-width: 190px;
+      aspect-ratio: 1 / 1;
       object-fit: cover;
       object-position: top;
-      animation: kenBurns 16s ease-in-out infinite alternate;
-      filter: saturate(0.75) brightness(0.8) blur(4px);
+      border-radius: 50%;
+      border: 3px solid var(--marigold);
+      box-shadow: var(--shadow-lg);
+      display: block;
     }
-    .hero-bg img:nth-child(2) { animation-delay: 0.6s; }
-    .hero-bg img:nth-child(3) { animation-delay: 1.2s; }
-    .hero-bg img:nth-child(4) { animation-delay: 1.8s; }
-    .hero-scrim {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(9,28,23,0.92) 0%, rgba(9,28,23,0.62) 45%, rgba(9,28,23,0.42) 100%);
+    .hero-photo-caption {
+      text-align: center;
+      font-size: 0.75rem;
+      color: rgba(245,241,230,0.75);
+      margin-top: 0.7rem;
+      font-family: "IBM Plex Mono", monospace;
     }
+    @media (max-width: 860px) {
+      .hero-content-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-photo-card { order: -1; }
+      .hero-photo-card img { max-width: 130px; }
+      .hero-btns { justify-content: center; }
+      .hero-trust-strip { justify-content: center; text-align: left; }
+      .hero-stats-bar { text-align: left; }
+    }
+    .rotate-wrap {
+      display: inline-block;
+      position: relative;
+      vertical-align: bottom;
+    }
+    .rotate-word {
+      display: inline-block;
+      color: var(--marigold);
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+    .rotate-word.swap {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    .hero-trust-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.4rem;
+      margin: 0 0 1.6rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(245,241,230,0.2);
+    }
+    .hero-trust-strip span {
+      font-size: 0.82rem;
+      color: rgba(245,241,230,0.88);
+      font-weight: 500;
+    }
+    @media (max-width: 640px) {
+      .hero-trust-strip { flex-direction: column; gap: 0.5rem; }
+    }
+    .hero-scrim { display: none; }
     .hero-big-content {
       position: relative;
       z-index: 2;
       width: 100%;
-      padding: 4.5rem 0 3.2rem;
+      padding: 0;
     }
     .hero-big .eyebrow {
       background: rgba(245,241,230,0.12);
@@ -187,8 +266,8 @@
     }
     .hero-big .eyebrow::before { color: var(--marigold); }
     .hero-big h1 {
-      font-size: clamp(2.4rem, 5.6vw, 4rem);
-      max-width: 16ch;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      max-width: 20ch;
       color: var(--white);
       text-shadow: 0 6px 26px rgba(0,0,0,0.35);
       margin-bottom: 1.1rem;
@@ -274,9 +353,6 @@
       letter-spacing: 0.05em;
     }
     @media (max-width: 720px) {
-      .hero-big { min-height: 82vh; }
-      .hero-bg { grid-template-columns: 1fr; }
-      .hero-bg img:not(:first-child) { display: none; }
       .hero-stats-bar { flex-wrap: wrap; }
       .hero-stats-bar .stat {
         flex: 1 1 50%;
@@ -542,12 +618,14 @@
   <!-- NAV -->
   <nav class="site-nav">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo"><span class="dot"></span>BWD Studio</a>
+      <a href="index.html" class="nav-logo"><span class="dot"></span>Budget Website Developers</a>
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About Me</a></li>
         <li><a href="services.html">Services &amp; Pricing</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="global.html">Global Clients</a></li>
+        <li><a href="blog/index.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="https://wa.me/919003643649" target="_blank" class="nav-cta">WhatsApp Me</a></li>
       </ul>
@@ -558,6 +636,8 @@
       <a href="about.html">About Me</a>
       <a href="services.html">Services &amp; Pricing</a>
       <a href="portfolio.html">Portfolio</a>
+      <a href="global.html">Global Clients</a>
+      <a href="blog/index.html">Blog</a>
       <a href="contact.html">Contact</a>
       <a href="https://wa.me/919003643649" target="_blank">WhatsApp Me →</a>
     </div>
@@ -565,26 +645,73 @@
 
   <!-- HERO -->
   <section class="hero-big">
-    <div class="hero-bg">
-      <img src="images/school.PNG" alt="School website built by Budget Website Developers" />
-      <img src="images/hospital.PNG" alt="Hospital website built by Budget Website Developers" />
-      <img src="images/ssswomens.png" alt="College website built by Budget Website Developers" />
-      <img src="images/ravanaa.PNG" alt="Local business website built by Budget Website Developers" />
-    </div>
-    <div class="hero-scrim"></div>
     <div class="wrap hero-big-content">
-      <div class="eyebrow">Tamil Nadu · India · Worldwide · Est. 2025</div>
-      <h1>Tamil Nadu's School &amp; College Website Specialist — Stop Losing Admissions to the Competitor Who <em>Shows Up First on Google</em>.</h1>
-      <p class="lead">Custom, mobile-first websites — live in 7 days, built and delivered personally. No agency, no template.</p>
-      <div class="hero-btns">
-        <a href="https://wa.me/919003643649?text=Hi%20Vasumathi%2C%20I%20want%20a%20website%20for%20my%20business.%20Can%20we%20talk%3F" target="_blank" class="btn btn-primary">💬 Get My Free Quote on WhatsApp</a>
-        <a href="services.html" class="btn btn-ghost">See Pricing →</a>
+      <div class="hero-content-grid">
+        <div>
+          <div class="eyebrow">Tamil Nadu · India · Worldwide · Est. 2025</div>
+          <h1>Need a Website for Your <span class="rotate-wrap"><span class="rotate-word" id="rotateWord">School</span></span>?</h1>
+          <p class="lead">Come to us — we build it, and it's <strong>100% yours</strong> from day one. Custom, mobile-first, live in 7 days, built and delivered personally. No agency, no template.</p>
+          <div class="hero-btns">
+            <a href="https://wa.me/919003643649?text=Hi%20Vasumathi%2C%20I%20want%20a%20website%20for%20my%20business.%20Can%20we%20talk%3F" target="_blank" class="btn btn-primary">💬 Get My Free Quote on WhatsApp</a>
+            <a href="services.html" class="btn btn-ghost">See Pricing →</a>
+          </div>
+          <div class="hero-trust-strip">
+            <span>✓ You own the domain, hosting &amp; code — always</span>
+            <span>✓ Pay the balance only after you approve the live demo</span>
+            <span>✓ Every portfolio site is real &amp; verifiable, right now</span>
+          </div>
+          <div class="hero-stats-bar">
+            <div class="stat"><b>₹18k / $400</b><span>Starting Price</span></div>
+            <div class="stat"><b>4+</b><span>Live Client Sites</span></div>
+            <div class="stat"><b>7 Days*</b><span>Delivery</span></div>
+            <div class="stat"><b>5.0★</b><span>Client Rating</span></div>
+          </div>
+        </div>
+        <div class="hero-photo-card">
+          <img src="images/vasu.png" alt="Vasumathi Dulasidaran, founder of Budget Website Developers" />
+          <div class="hero-photo-caption">Vasumathi<br>Founder</div>
+        </div>
       </div>
-      <div class="hero-stats-bar">
-        <div class="stat"><b>₹18k / $400</b><span>Starting Price</span></div>
-        <div class="stat"><b>4+</b><span>Live Client Sites</span></div>
-        <div class="stat"><b>7 Days*</b><span>Delivery</span></div>
-        <div class="stat"><b>5.0★</b><span>Client Rating</span></div>
+    </div>
+  </section>
+
+  <!-- WHO I BUILD FOR -->
+  <section>
+    <div class="wrap">
+      <div class="eyebrow center" style="display:table;margin-left:auto;margin-right:auto">Built for Every Kind of Business</div>
+      <h2 class="sec-title center">Whoever You Are, I've Probably Built for Someone Like You</h2>
+      <p class="sec-sub center">One developer, every industry — the same personal process and pricing no matter what you're building.</p>
+      <div class="who-grid reveal">
+        <div class="who-card">
+          <div class="who-ic">🍽️</div>
+          <h3>Restaurants &amp; Cafes</h3>
+          <p>Menu pages, WhatsApp ordering links, location &amp; hours, Google Maps integration.</p>
+        </div>
+        <div class="who-card">
+          <div class="who-ic">🛍️</div>
+          <h3>Retail &amp; Local Shops</h3>
+          <p>Product showcases, WhatsApp ordering, store locator, easy self-updates.</p>
+        </div>
+        <div class="who-card">
+          <div class="who-ic">🚀</div>
+          <h3>Startups &amp; Freelancers</h3>
+          <p>Portfolio sites, service pages, booking &amp; contact forms that convert.</p>
+        </div>
+        <div class="who-card">
+          <div class="who-ic">🏫</div>
+          <h3>Schools &amp; Colleges</h3>
+          <p>Admissions info, news &amp; events, staff directories, parent-friendly layouts.</p>
+        </div>
+        <div class="who-card">
+          <div class="who-ic">🏥</div>
+          <h3>Clinics &amp; Hospitals</h3>
+          <p>Doctor profiles, appointment enquiry forms, department pages.</p>
+        </div>
+        <div class="who-card">
+          <div class="who-ic">💼</div>
+          <h3>Professionals &amp; Consultants</h3>
+          <p>Personal brand sites, credibility pages, lead-capture forms.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -599,7 +726,7 @@
         <div class="founder-eyebrow">The Person Behind Every Site</div>
         <blockquote class="founder-quote">"You talk to me, and I build your site myself."</blockquote>
         <p class="founder-byline">Vasumathi Dulasidaran · Founder, Budget Website Developers</p>
-        <p class="founder-sub">Six years as a Senior Software Developer in Bangalore, now building websites for schools, hospitals and businesses across Tamil Nadu — personally, not through a team.</p>
+        <p class="founder-sub">Six years as a Senior Software Developer in Bangalore, now building websites for restaurants, shops, startups, schools and clinics — in India and worldwide — personally, not through a team.</p>
         <a href="about.html" class="verify-chip">✓ Read my full story →</a>
       </div>
     </div>
@@ -984,7 +1111,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-q">Do you only build for schools and hospitals? <span>+</span></button>
-        <div class="faq-a">No — those are common clients, but I build for any business: shops, services, colleges, professionals. Whether you're in Tamil Nadu, anywhere else in India, or outside India entirely, this works for you.</div>
+        <div class="faq-a">No — those are common clients, but I build for any business: restaurants, cafes, retail shops, startups, colleges, professionals. Whether you're in Tamil Nadu, anywhere else in India, or outside India entirely, this works for you.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q">What if I don't like the demo? <span>+</span></button>
@@ -1021,15 +1148,15 @@
     <div class="wrap">
       <div class="eyebrow center" style="display:table;margin-left:auto;margin-right:auto">Where I Work</div>
       <h2 class="sec-title center">Website Design Services Across India — and Worldwide</h2>
-      <p class="sec-sub center">Based in Tamil Nadu, working remotely with schools, hospitals, colleges and local businesses in every Indian state, plus clients outside India who want an honest, directly-built website without agency overhead.</p>
+      <p class="sec-sub center">Based in Tamil Nadu, working remotely with restaurants, shops, startups, schools, clinics and any business in every Indian state, plus clients outside India who want an honest, directly-built website without agency overhead.</p>
       <div class="keyword-strip">
-        <span class="keyword-pill">Vasumathi Dulasidaran</span>
-        <span class="keyword-pill">School Website Development</span>
-        <span class="keyword-pill">Hospital Website Design</span>
-        <span class="keyword-pill">College Website Design</span>
-        <span class="keyword-pill">SEO Services in Tamil Nadu</span>
-        <span class="keyword-pill">Website Designer in Vellore</span>
-        <span class="keyword-pill">Website Developer in Arcot</span>
+        <a href="services.html" class="keyword-pill">Restaurant &amp; Cafe Website Design</a>
+        <a href="services.html" class="keyword-pill">Retail &amp; Shop Websites</a>
+        <a href="services.html" class="keyword-pill">Startup Website Design</a>
+        <a href="services.html" class="keyword-pill">School Website Development</a>
+        <a href="services.html" class="keyword-pill">Clinic &amp; Hospital Website Design</a>
+        <a href="blog/index.html" class="keyword-pill">SEO Guides &amp; Blog</a>
+        <a href="contact.html" class="keyword-pill">Website Designer in Vellore</a>
       </div>
       <p class="sec-sub center" style="margin-top:2.4rem;font-weight:600;color:var(--teal)">Serving clients across every state and union territory in India</p>
       <div class="keyword-strip">
@@ -1077,9 +1204,9 @@
   <footer>
     <div class="wrap footer-grid">
       <div>
-        <div class="footer-logo">BWD Studio</div>
+        <div class="footer-logo">Budget Website Developers</div>
         <div class="footer-legal-name">Budget Website Developers &middot; Tamil Nadu, India</div>
-        <p style="font-size:0.85rem;max-width:280px">Affordable, professional websites — customized to your requirements — for schools, clinics &amp; businesses across every state in India, and worldwide.</p>
+        <p style="font-size:0.85rem;max-width:280px">Affordable, professional websites — customized to your requirements — for restaurants, shops, startups, schools, clinics &amp; any business, in India and worldwide.</p>
       </div>
       <div>
         <h4>Quick Links</h4>
@@ -1087,8 +1214,9 @@
           <li><a href="about.html">About Me</a></li>
           <li><a href="services.html">Services &amp; Pricing</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="global.html">Global Clients</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="https://budgetwebsitedevelopers.blogspot.com/" target="_blank">Blog</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
         </ul>
       </div>
       <div>
@@ -1096,7 +1224,7 @@
         <ul>
           <li><a href="tel:+919003643649">📞 90036 43649</a></li>
           <li><a href="https://wa.me/919003643649" target="_blank">💬 WhatsApp</a></li>
-          <li>📍 Vellore, Tamil Nadu</li>
+          <li>📍 Tamil Nadu, India</li>
           <li><a href="https://www.linkedin.com/in/vasumathi-dulasidaran-817b8784/" target="_blank">🔗 LinkedIn</a></li>
           <li><a href="https://www.instagram.com/letslearnsomeindianlanguages" target="_blank">📸 Instagram</a></li>
         </ul>
@@ -1105,10 +1233,8 @@
     <div class="footer-bottom">© 2026 Budget Website Developers · Vasumathi Dulasidaran</div>
   </footer>
 
-  <!-- Floating WhatsApp -->
   <a href="https://wa.me/919003643649?text=Hi%20Vasumathi%2C%20I%20am%20interested%20in%20a%20website%20for%20my%20business." class="wa-float" target="_blank" aria-label="WhatsApp">💬</a>
 
-  <!-- AI Chatbot -->
   <button class="bot-float" id="botToggle" aria-label="Chat with assistant">🤖</button>
   <div class="bot-panel" id="botPanel">
     <div class="bot-head">Ask Vasu's Assistant<span class="sub">Usually replies instantly</span><button class="bot-close" id="botClose" aria-label="Close chat">✕</button></div>

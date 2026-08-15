@@ -188,3 +188,25 @@ if (leadForm) {
     });
   });
 })();
+
+// ---------- HERO ROTATING WORD ----------
+(function () {
+  const el = document.getElementById("rotateWord");
+  if (!el) return;
+
+  const words = ["School", "College", "Cafe", "Restaurant", "Shop", "Startup", "Clinic", "Business"];
+  let i = 0;
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
+  if (reduceMotion) return;
+
+  setInterval(() => {
+    el.classList.add("swap");
+    setTimeout(() => {
+      i = (i + 1) % words.length;
+      el.textContent = words[i];
+      el.classList.remove("swap");
+    }, 350);
+  }, 2200);
+})();
