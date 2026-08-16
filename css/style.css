@@ -145,16 +145,31 @@ section {
   color: var(--teal);
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
   white-space: nowrap;
 }
 
-.nav-logo .dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--marigold);
-  display: inline-block;
+.nav-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.nav-logo-credit {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-size: 0.62rem;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+  margin-top: 0.1rem;
+}
+
+.nav-logo-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  display: block;
+  flex-shrink: 0;
 }
 
 .nav-links {

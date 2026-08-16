@@ -5,10 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="xr7_4LVCiftgjp5NkGRvG96FTxHsi5VYuT93rpDKlVk" />
   <link rel="canonical" href="https://budgetwebsitedevelopersvellore.org/portfolio.html" />
-  <title>Portfolio | Website Designer for India & Worldwide — Live Client Sites</title>
+  <link rel="icon" href="images/favicon.ico" sizes="any" />
+  <link rel="icon" href="images/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="images/favicon-16.png" type="image/png" sizes="16x16" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Budget Website Developers" />
+  <meta property="og:title" content="Portfolio — Live Client Websites | Budget Website Developers" />
+  <meta property="og:description" content="Real, live websites for a school, a college, a hospital & a local business — each one verifiable right now, with real results." />
+  <meta property="og:url" content="https://budgetwebsitedevelopersvellore.org/portfolio.html" />
+  <meta property="og:image" content="https://budgetwebsitedevelopersvellore.org/images/og-share.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfolio — Live Client Websites | Budget Website Developers" />
+  <meta name="twitter:description" content="Real, live websites for a school, a college, a hospital & a local business — each one verifiable right now, with real results." />
+  <meta name="twitter:image" content="https://budgetwebsitedevelopersvellore.org/images/og-share.png" />
+  <title>Portfolio — Live Client Websites | Budget Website Developers</title>
   <meta
     name="description"
-    content="Live websites built for SSS College for Women, Bharathi Vidyalaya School, GD Hospital Arcot & more — real client proof for a developer now serving clients across India and worldwide."
+    content="Real, live websites for a school, a college, a hospital & a local business — each one verifiable right now, with real results."
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link
@@ -35,6 +51,13 @@
     .case-num { font-family:"IBM Plex Mono",monospace; font-size:0.7rem; color:var(--ink-soft); letter-spacing:0.06em; margin-bottom:0.6rem; }
     .case-label { font-family:"IBM Plex Mono",monospace; font-size:0.68rem; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; color:var(--marigold-d); margin:1rem 0 0.35rem; }
     .pf-intro { max-width:640px; font-size:0.95rem; color:var(--ink-soft); margin-top:0.8rem; }
+    .pf-jump { display:flex; gap:0.9rem; margin-top:1.4rem; flex-wrap:wrap; }
+    .pf-jump a { display:flex; align-items:center; gap:0.6rem; background:var(--white); border:1px solid var(--line); border-radius:10px; padding:0.5rem 0.9rem 0.5rem 0.5rem; text-decoration:none; color:var(--ink); transition:border-color .15s, transform .15s; }
+    .pf-jump a:hover { border-color:var(--teal); transform:translateY(-2px); }
+    .pf-jump img { width:38px; height:38px; object-fit:cover; border-radius:6px; }
+    .pf-jump span { font-size:0.78rem; font-weight:600; line-height:1.3; }
+    .pf-jump em { font-style:normal; font-weight:500; color:var(--ink-soft); font-size:0.72rem; }
+    @media (max-width:560px){ .pf-jump { gap:0.6rem; } .pf-jump a { padding:0.4rem 0.7rem 0.4rem 0.4rem; } }
     @media (max-width:860px){
       .case { grid-template-columns:1fr; }
       .case-img { order:0 !important; }
@@ -44,7 +67,7 @@
 <body>
   <nav class="site-nav">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo"><span class="dot"></span>Budget Website Developers</a>
+      <a href="index.html" class="nav-logo"><img src="images/logo-mark.png" alt="Budget Website Developers by GD Technologies logo" class="nav-logo-mark" /><span class="nav-logo-text">Budget Website Developers<span class="nav-logo-credit">by GD Technologies</span></span></a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Me</a></li>
@@ -72,31 +95,36 @@
   <section style="padding-bottom:0.5rem">
     <div class="wrap">
       <div class="eyebrow">Portfolio</div>
-      <h1 class="sec-title">Real sites. Real Tamil Nadu businesses.</h1>
-      <p class="sec-sub">A selection of live websites built for schools, clinics and businesses — custom, mobile-first, Google-ready, and priced for Tamil Nadu budgets. Each one delivered, tracked, and handed over just like the docket on the homepage.</p>
-      <p class="pf-intro">Every project below follows the same process: understand the real problem the client was facing, build something that actually solves it, then prove it works — not just show it looking nice.</p>
+      <h1 class="sec-title">4 real websites. Live, verified, still online.</h1>
+      <p class="sec-sub">A closer look at 4 featured projects — schools, a clinic, a college and a local business — each one custom-built, delivered fast, and click-through verifiable right now.</p>
+      <div class="pf-jump">
+        <a href="#case-01"><img src="images/ssswomens.png" alt="" /><span>SSS College<br /><em>College</em></span></a>
+        <a href="#bharathi-proof"><img src="images/school.PNG" alt="" /><span>Bharathi Vidyalaya<br /><em>School</em></span></a>
+        <a href="#case-03"><img src="images/hospital.PNG" alt="" /><span>GD Hospital<br /><em>Clinic</em></span></a>
+        <a href="#case-04"><img src="images/ravanaa.PNG" alt="" /><span>Ravanaa<br /><em>Local Business</em></span></a>
+      </div>
     </div>
   </section>
 
   <section style="padding-top:1rem">
     <div class="wrap">
 
-      <div class="case reveal">
+      <div class="case reveal" id="case-01">
         <div class="case-img placeholder"><img src="images/ssswomens.png" alt="SSS Womens College website homepage" /></div>
         <div>
           <div class="case-num">CASE FILE Nº01 / 04</div>
           <span class="case-tag" style="background:var(--marigold);color:var(--teal)">⭐ My First Client</span> <span class="verify-chip" style="margin:0 0 0.7rem 0.4rem;display:inline-flex">✓ Live &amp; Verified</span>
           <h3>SSS College for Women, Arni</h3>
-          <div class="case-label">The Challenge</div>
-          <p>The college needed a website that felt as premium as the education it offers, with instant admissions answers after hours — and the owner had no technical background, so he had no way to know if the site was actually working for him.</p>
-          <div class="case-label">The Approach</div>
+          <div class="case-label">🎯 The Challenge</div>
+          <p>A premium-feeling site with instant admissions answers, for a non-technical owner who needed to check it was working himself.</p>
+          <div class="case-label">🛠️ The Approach</div>
           <ul class="case-feats">
             <li>Fully scroll &amp; entrance-animated custom design</li>
             <li>Media/video gallery with PDF.js viewer</li>
-            <li>Built-in AI chatbot answering admissions questions after hours</li>
-            <li>Simple Google Analytics dashboard built into the admin panel, so he can check visitor numbers himself, anytime, without needing to understand how a website works</li>
+            <li>Built-in AI chatbot for after-hours admissions questions</li>
+            <li>Simple visitor-analytics dashboard built into his admin panel</li>
           </ul>
-          <div class="case-label">The Result</div>
+          <div class="case-label">✅ The Result</div>
           <div class="result-chips">
             <span class="result-chip">📍 Appears on Google</span>
             <span class="result-chip">🔍 SEO Optimized</span>
@@ -106,32 +134,32 @@
         </div>
       </div>
 
-      <div class="case reveal">
+      <div class="case reveal" id="bharathi-proof">
         <div class="case-img"><img src="images/school.PNG" alt="Bharathi Vidyalaya School website homepage" /></div>
         <div>
           <div class="case-num">CASE FILE Nº02 / 04</div>
           <span class="case-tag">School · Growth Package</span> <span class="verify-chip" style="margin:0 0 0.7rem 0.4rem;display:inline-flex">✓ Live &amp; Verified</span>
           <h3>Bharathi Vidyalaya School</h3>
-          <div class="case-label">The Challenge</div>
-          <p>Prospective parents had no way to find the school online — admissions relied entirely on word of mouth, referrals, and walk-ins, with no presence on Google Search at all.</p>
-          <div class="case-label">The Approach</div>
+          <div class="case-label">🎯 The Challenge</div>
+          <p>Zero online presence — admissions ran entirely on word of mouth, referrals and walk-ins, invisible on Google Search.</p>
+          <div class="case-label">🛠️ The Approach</div>
           <ul class="case-feats">
             <li>Dynamic News &amp; Events via Google Sheets integration</li>
             <li>Google Search Console + Google Business Profile setup</li>
             <li>Mobile-first, bilingual-ready layout</li>
           </ul>
-          <div class="case-label">The Result</div>
-          <p style="font-size:0.88rem;color:var(--ink-soft);margin-bottom:0.8rem">In the 3 months after launch, the school's site showed up in Google search results 1,700 times and got 47 clicks — averaging position #6, which puts it on the first page for many of the searches parents actually use.</p>
+          <div class="case-label">✅ The Result</div>
+          <p style="font-size:0.88rem;color:var(--ink-soft);margin-bottom:0.8rem">First-page visibility within 3 months — real numbers below, straight from Google.</p>
           <div class="result-chips">
             <span class="result-chip">📍 Appears on Google</span>
-            <span class="result-chip">📈 1.7K Impressions in 3 Months</span>
-            <span class="result-chip">🎯 Avg. Position #6 on Google</span>
+            <span class="result-chip">📈 1.79K Impressions in 3 Months</span>
+            <span class="result-chip">🎯 Avg. Position 6.4 on Google</span>
             <span class="result-chip">📱 Mobile Speed 95+</span>
             <span class="result-chip">📝 Inquiry Form</span>
             <span class="result-chip">💬 WhatsApp Integration</span>
           </div>
           <div class="proof-img">
-            <img src="images/gsc-bharathi.png" alt="Google Search Console performance data for Bharathi Vidyalaya School showing 1.7K impressions and 47 clicks over 3 months" />
+            <img src="images/gsc-bharathi.png" alt="Google Search Console performance data for Bharathi Vidyalaya School showing 1.79K impressions and 48 clicks over 3 months" />
             <div class="proof-caption">Real Google Search Console data for bharathividyalayaschool.com — 3 months after launch</div>
           </div>
           <div class="case-quote">"Since our website went live, we have been getting calls from people who found us online. Please keep up your good work!"<br /><strong>— Bharathi Vidyalaya School</strong></div>
@@ -139,21 +167,21 @@
         </div>
       </div>
 
-      <div class="case reveal">
+      <div class="case reveal" id="case-03">
         <div class="case-img"><img src="images/hospital.PNG" alt="GD Hospital Arcot website homepage" /></div>
         <div>
           <div class="case-num">CASE FILE Nº03 / 04</div>
           <span class="case-tag">Clinic · Growth Package</span> <span class="verify-chip" style="margin:0 0 0.7rem 0.4rem;display:inline-flex">✓ Live &amp; Verified</span>
           <h3>GD Hospital, Arcot</h3>
-          <div class="case-label">The Challenge</div>
-          <p>Patients searching online often chose whichever clinic looked most trustworthy on Google — with no website, GD Hospital was invisible at exactly the moment patients were deciding where to go.</p>
-          <div class="case-label">The Approach</div>
+          <div class="case-label">🎯 The Challenge</div>
+          <p>No website meant invisible on Google — right when patients were choosing which clinic to trust.</p>
+          <div class="case-label">🛠️ The Approach</div>
           <ul class="case-feats">
             <li>Doctor &amp; department profiles</li>
             <li>Appointment enquiry form</li>
             <li>Fast-loading, mobile-optimized</li>
           </ul>
-          <div class="case-label">The Result</div>
+          <div class="case-label">✅ The Result</div>
           <div class="result-chips">
             <span class="result-chip">📍 Appears on Google</span>
             <span class="result-chip">⚡ Fast Loading</span>
@@ -167,18 +195,18 @@
       <div class="case reveal">
         <div class="case-img"><img src="images/ravanaa.PNG" alt="Ravanaa Bouncer Services website homepage" /></div>
         <div>
-          <div class="case-num">CASE FILE Nº04 / 04</div>
+          <div class="case-num" id="case-04">CASE FILE Nº04 / 04</div>
           <span class="case-tag">Local Business · Starter Package</span> <span class="verify-chip" style="margin:0 0 0.7rem 0.4rem;display:inline-flex">✓ Live &amp; Verified</span>
           <h3>Ravanaa Bouncer Services</h3>
-          <div class="case-label">The Challenge</div>
-          <p>Time was the real constraint — Arun needed a professional web presence fast, without the weeks-long back-and-forth larger agencies are known for.</p>
-          <div class="case-label">The Approach</div>
+          <div class="case-label">🎯 The Challenge</div>
+          <p>Needed a professional web presence fast — no time for the weeks-long back-and-forth of larger agencies.</p>
+          <div class="case-label">🛠️ The Approach</div>
           <ul class="case-feats">
             <li>Delivered overnight — demo ready by morning</li>
             <li>SEO audit + 20-step handover checklist</li>
             <li>WhatsApp-first enquiry flow</li>
           </ul>
-          <div class="case-label">The Result</div>
+          <div class="case-label">✅ The Result</div>
           <div class="result-chips">
             <span class="result-chip">📍 Appears on Google</span>
             <span class="result-chip">🔍 SEO Optimized</span>
@@ -207,7 +235,7 @@
     <div class="wrap footer-grid">
       <div>
         <div class="footer-logo">Budget Website Developers</div>
-        <div class="footer-legal-name">Budget Website Developers &middot; Tamil Nadu, India</div>
+        <div class="footer-legal-name">Tamil Nadu, India &middot; Serving clients worldwide</div>
         <p style="font-size:0.85rem;max-width:280px">Affordable, professional websites — customized to your requirements — for restaurants, shops, startups, schools, clinics &amp; any business, in India and worldwide.</p>
       </div>
       <div>
