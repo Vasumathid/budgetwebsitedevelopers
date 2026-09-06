@@ -561,6 +561,111 @@ section {
   }
 }
 
+/* ---------- WHY BUDGET ---------- */
+.wb-quote {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 1.55rem;
+  line-height: 1.5;
+  color: var(--ink);
+  text-align: center;
+  max-width: 740px;
+  margin: 2rem auto 2.6rem;
+  padding: 0 1.6rem;
+  position: relative;
+}
+
+.wb-quote::before {
+  content: "\201C";
+  font-family: "Fraunces", serif;
+  font-size: 4.2rem;
+  font-weight: 700;
+  color: var(--marigold);
+  opacity: 0.55;
+  position: absolute;
+  left: -0.3rem;
+  top: -1.8rem;
+  line-height: 1;
+}
+
+.wb-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.wb-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.7rem 1.4rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.wb-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.wb-ic {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.wb-card h4 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+.wb-card p {
+  font-size: 0.87rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.wb-tagline {
+  text-align: center;
+  margin: 2.4rem auto 0;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--ink-soft);
+  position: relative;
+  padding-top: 1.6rem;
+  max-width: 420px;
+}
+
+.wb-tagline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 46px;
+  height: 3px;
+  background: var(--marigold);
+  border-radius: 2px;
+}
+
+.wb-tagline span {
+  color: var(--ink);
+}
+
+@media (max-width: 720px) {
+  .wb-grid {
+    grid-template-columns: 1fr;
+  }
+  .wb-quote {
+    font-size: 1.25rem;
+  }
+}
+
 /* ---------- FOOTER ---------- */
 footer {
   background: var(--teal);
@@ -602,6 +707,116 @@ footer {
   font-size: 1.2rem;
   color: var(--white);
   margin-bottom: 0.2rem;
+}
+
+.footer-logo-badge {
+  display: inline-block;
+  background: var(--white);
+  padding: 0.65rem 0.9rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  margin-bottom: 1rem;
+}
+
+.footer-logo-badge img {
+  display: block;
+  width: 190px;
+  max-width: 100%;
+  height: auto;
+}
+
+.footer-tagline {
+  font-size: 0.85rem;
+  line-height: 1.65;
+  max-width: 290px;
+  color: rgba(255, 255, 255, 0.78);
+  margin-top: 0.6rem;
+}
+
+.footer-tagline strong {
+  color: var(--white);
+  font-weight: 700;
+}
+
+/* ---------- SERVICE TAGS + COLLAPSIBLE SERVICE-AREA LIST ---------- */
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+  max-width: 780px;
+  margin: 2rem auto 0;
+}
+
+.service-tag {
+  background: var(--white);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.service-tag:hover {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.area-details {
+  max-width: 780px;
+  margin: 2rem auto 0;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.5rem;
+}
+
+.area-details summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--ink);
+}
+
+.area-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.area-details summary::after {
+  content: "+";
+  flex-shrink: 0;
+  font-size: 1.3rem;
+  line-height: 1;
+  color: var(--teal);
+}
+
+.area-details[open] summary::after {
+  content: "\2212";
+}
+
+.area-details[open] summary {
+  margin-bottom: 0.9rem;
+}
+
+.area-details p {
+  font-size: 0.82rem;
+  line-height: 1.75;
+  color: var(--ink-soft);
+  margin-top: 0.8rem;
+}
+
+.area-details p:first-of-type {
+  margin-top: 0;
 }
 
 .footer-legal-name {
